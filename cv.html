@@ -1,0 +1,193 @@
+---
+layout: page
+title: Curriculum vitae
+eyebrow: CV
+permalink: /cv/
+description: "Curriculum vitae of Jiayao (Chee) Qi: education, appointments, grants, awards, and service."
+lede: "Education, appointments, grants, awards, and service. Publications, talks, and teaching have their own pages."
+---
+{%- assign p = site.data.profile -%}
+{%- assign cv = site.data.cv -%}
+
+<div class="cv-actions">
+  <a class="btn btn-primary button-md" href="{{ p.cv_pdf | relative_url }}">{% include icons/download-simple.svg %}Download CV (PDF)</a>
+</div>
+<nav class="jump" aria-label="On this page">
+  <a class="icon-link" href="#education">Education</a>
+  <a class="icon-link" href="#appointments">Appointments</a>
+  <a class="icon-link" href="#grants">Grants</a>
+  <a class="icon-link" href="#awards">Awards</a>
+  <a class="icon-link" href="#service">Service</a>
+  <a class="icon-link" href="#experience">Experience</a>
+</nav>
+
+<section class="block" id="education" aria-labelledby="edu-h" style="margin-top: var(--s-600)">
+  <h2 id="edu-h" class="heading-5">Education</h2>
+  <div class="rows">
+    {%- for e in cv.education %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ e.degree }}</h3>
+        <p class="body-6 muted">{{ e.school }}</p>
+        {%- if e.note %}<p class="caption-5 muted">{{ e.note }}</p>{% endif %}
+      </div>
+      <p class="row-side caption-4">{{ e.year }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" id="appointments" aria-labelledby="app-h">
+  <h2 id="app-h" class="heading-5">Academic appointments</h2>
+  <div class="rows">
+    {%- for a in cv.appointments %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ a.role }}</h3>
+        <p class="body-6 muted">{{ a.institution }}</p>
+        <ul class="points body-6">
+          {%- for pt in a.points %}<li>{{ pt }}</li>{% endfor %}
+        </ul>
+      </div>
+      <p class="row-side caption-4">{{ a.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" id="publications-summary" aria-labelledby="pub-h">
+  <h2 id="pub-h" class="heading-5">Publications and presentations</h2>
+  <div class="rows">
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ site.data.publications.journal.size }} journal articles, {{ site.data.publications.proceedings.size }} proceedings paper, {{ site.data.publications.chapters.size }} book chapters</h3>
+        <p class="body-6"><a class="link" href="{{ '/publications/' | relative_url }}">See all publications</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ site.data.talks.size }} conference presentations</h3>
+        <p class="body-6"><a class="link" href="{{ '/talks/' | relative_url }}">See all talks</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="grants" aria-labelledby="grants-h">
+  <h2 id="grants-h" class="heading-5">Grants and funding</h2>
+  <div class="rows">
+    {%- for g in cv.grants %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ g.title }}</h3>
+        <p class="body-6 muted">{{ g.funder }}. {{ g.role }}. {{ g.amount }}</p>
+      </div>
+      <p class="row-side caption-4">{{ g.year }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" id="awards" aria-labelledby="awards-h">
+  <h2 id="awards-h" class="heading-5">Awards and certifications</h2>
+  <div class="rows">
+    {%- for a in cv.awards %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ a.name }}</h3>
+        <p class="body-6 muted">{{ a.from }}</p>
+      </div>
+      <p class="row-side caption-4">{{ a.year }}</p>
+    </div>
+    {%- endfor %}
+    {%- for c in cv.certifications %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ c.name }}</h3>
+        <p class="body-6 muted">{{ c.note }}</p>
+      </div>
+      <p class="row-side caption-4">{{ c.year }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" id="service" aria-labelledby="service-h">
+  <h2 id="service-h" class="heading-5">Service</h2>
+
+  <h3 class="heading-6" style="margin-bottom: var(--s-200)">Doctoral committees</h3>
+  <div class="rows">
+    {%- for d in cv.doctoral_committees %}
+    <div class="row">
+      <div class="row-main">
+        <p class="title-3">{{ d.student }}, {{ d.institution }}</p>
+        <p class="body-6 muted">Dissertation: {{ d.dissertation }}</p>
+      </div>
+      <p class="row-side caption-4">{{ d.year }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h3 class="heading-6" style="margin: var(--s-500) 0 var(--s-200)">Editorial boards</h3>
+  <div class="rows">
+    {%- for e in cv.editorial %}
+    <div class="row">
+      <div class="row-main">
+        <p class="title-3">{{ e.name }}</p>
+        <p class="body-6 muted">{{ e.role }}</p>
+      </div>
+      <p class="row-side caption-4">{{ e.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h3 class="heading-6" style="margin: var(--s-500) 0 var(--s-200)">Invited reviewer</h3>
+  <div class="rows">
+    {%- for r in cv.reviewing %}
+    <div class="row">
+      <div class="row-main">
+        <p class="title-3">{{ r.name }}</p>
+      </div>
+      <p class="row-side caption-4">{{ r.detail }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h3 class="heading-6" style="margin: var(--s-500) 0 var(--s-200)">University service</h3>
+  <div class="rows">
+    {%- for u in cv.university_service %}
+    <div class="row">
+      <div class="row-main">
+        <p class="title-3">{{ u.name }}</p>
+        <p class="body-6 muted">{{ u.institution }}{% if u.note %}. {{ u.note }}{% endif %}</p>
+      </div>
+      <p class="row-side caption-4">{{ u.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h3 class="heading-6" style="margin: var(--s-500) 0 var(--s-200)">Professional affiliations</h3>
+  <div class="rows">
+    {%- for a in cv.affiliations %}
+    <div class="row">
+      <div class="row-main"><p class="title-3">{{ a.name }}</p></div>
+      <p class="row-side caption-4">{{ a.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" id="experience" aria-labelledby="exp-h">
+  <h2 id="exp-h" class="heading-5">Professional experience</h2>
+  <div class="rows">
+    {%- for x in cv.experience %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ x.role }}</h3>
+        <p class="body-6 muted">{{ x.org }}</p>
+      </div>
+      <p class="row-side caption-4">{{ x.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

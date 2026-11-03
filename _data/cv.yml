@@ -1,0 +1,153 @@
+# Everything on the online CV page that is not a publication, talk, or course.
+# Articles in review, articles in progress, and unfunded grants are left out on purpose.
+
+education:
+  - degree: "Ph.D. in Sport and Entertainment Management"
+    school: "University of South Carolina"
+    year: 2024
+    note: "Advisor: Samuel Todd, Ph.D. Committee: Stephen Shapiro, Ph.D., Khalid Ballouli, Ph.D., Taylor Wen, Ph.D."
+  - degree: "M.S.Ed. in Sport Management"
+    school: "Baylor University"
+    year: 2020
+  - degree: "M.S. in Finance"
+    school: "Johns Hopkins University"
+    year: 2016
+  - degree: "B.S.B.A. in Finance"
+    school: "Northern Arizona University"
+    year: 2015
+
+appointments:
+  - role: "Clinical Assistant Professor"
+    institution: "Southern Methodist University"
+    period: "2026 – present"
+    points:
+      - "Teach Revenue in Sports, Senior Project, Sport Marketing, and Sports Data and Analytics, totaling 11 sections."
+      - "Serve on the Provost appointed Committee on Academic Petitions and the Graduate Student Admissions Committee."
+  - role: "Clinical Assistant Professor"
+    institution: "Indiana University Bloomington"
+    period: "2024 – 2025"
+    points:
+      - "Taught three graduate courses, three undergraduate courses, and two independent studies, totaling 17 sections."
+      - "Developed analytical research on human resource management and organizational behavior of sport in higher education."
+  - role: "Instructor of Record (Doctoral Student)"
+    institution: "University of South Carolina"
+    period: "2021 – 2024"
+    points:
+      - "Taught two undergraduate courses, totaling eight sections."
+
+grants:
+  - title: "When passion for sport jobs is exciting, and when it isn't: A biometric approach"
+    funder: "SMU Open Access Publishing Grant"
+    role: "PI"
+    year: 2026
+    amount: "$2,000"
+  - title: "The personalization-privacy paradox: Fan acceptance of AI-driven marketing in sport"
+    funder: "SMU Faculty Research Grant"
+    role: "PI"
+    year: 2026
+    amount: "$4,000"
+  - title: "Investigating employee behavior and well-being at Formula One United States Grand Prix"
+    funder: "Professional Development"
+    role: "PI"
+    year: 2024
+    amount: "$3,000"
+  - title: "Fandom vs. employment: Examining the impact of team identification on fan and employment outcomes for job seekers"
+    funder: "College of Hospitality, Retail and Sport Management, University of South Carolina"
+    role: "PI, with S. L. Shapiro and S. Y. Todd"
+    year: 2024
+    amount: "$1,000"
+  - title: "Passion for work in sport: A deep dive into its origin, growth, and trajectory"
+    funder: "College of Hospitality, Retail and Sport Management, University of South Carolina"
+    role: "PI, with S. Y. Todd"
+    year: 2022
+    amount: "$1,000"
+
+awards:
+  - name: "Outstanding Doctoral Student Researcher of the Year"
+    from: "College of Hospitality, Retail and Sport Management, University of South Carolina"
+    year: 2023
+
+certifications:
+  - name: "Biometrics and User Experience Lab Certification"
+    year: 2023
+    note: "Workshops on behavioral and psychological experiments with eye tracking, facial expression, galvanic skin response, and EEG."
+  - name: "Preparing Future Faculty (PFF) Certification"
+    year: 2021
+    note: "National program of the Council of Graduate Schools preparing doctoral students for faculty careers."
+
+doctoral_committees:
+  - student: "Benqiao (Stella) Jiang"
+    institution: "Indiana University Bloomington"
+    year: 2026
+    dissertation: "Motivation and Perspectives of Fans Engaging on Online Sport Forums"
+  - student: "Sinhae Roh"
+    institution: "Indiana University Bloomington"
+    year: 2026
+    dissertation: "The Impact of CSR-Core Business Fit and Message Specificity on Consumer Purchase Intentions of Sporting Goods"
+
+editorial:
+  - name: "Journal of Applied Sport Management"
+    role: "Editorial Review Board"
+    period: "2024 – present"
+  - name: "Sports Innovation Journal"
+    role: "Editorial Review Board"
+    period: "2026 – present"
+
+reviewing:
+  - name: "Journal of Applied Sport Management"
+    detail: "8 manuscripts, 2022 – 2026"
+  - name: "Sport Marketing Quarterly"
+    detail: "5 manuscripts, 2025 – 2026"
+  - name: "International Journal of Sport Communication"
+    detail: "3 manuscripts, 2025 – 2026"
+  - name: "Sport, Business and Management: An International Journal"
+    detail: "4 manuscripts, 2026"
+  - name: "Hawaii International Conference on System Sciences"
+    detail: "HICSS-60, 2026"
+  - name: "Sport Entertainment & Venues Tomorrow"
+    detail: "9 abstracts, 2021 – 2023"
+
+university_service:
+  - name: "Committee on Academic Petitions"
+    institution: "Southern Methodist University"
+    period: "Fall 2026 – present"
+    note: "Appointed by the Provost for a two year term."
+  - name: "Graduate Student Admissions Committee"
+    institution: "Southern Methodist University"
+    period: "Fall 2026 – present"
+  - name: "Faculty Search Committees (3), Sport Management"
+    institution: "Southern Methodist University"
+    period: "Spring 2026"
+    note: "Open rank clinical professor searches; three faculty hired."
+  - name: "Kate C. Remley Memorial Scholarship Committee"
+    institution: "Indiana University Bloomington"
+    period: "2025"
+  - name: "John R. Endwright Scholarship Committee"
+    institution: "Indiana University Bloomington"
+    period: "2025"
+
+affiliations:
+  - name: "Sport Marketing Association"
+    period: "2024 – present"
+  - name: "Positive Sport Organizational Behavior (PSOB) Laboratory"
+    period: "2023 – present"
+  - name: "European Association for Sport Management"
+    period: "2021 – present"
+  - name: "North American Society for Sport Management"
+    period: "2021 – present"
+  - name: "Applied Sport Management Association"
+    period: "2020 – present"
+
+experience:
+  - role: "Research Assistant"
+    org: "Baylor University, Waco, TX"
+    period: "2019 – 2020"
+  - role: "Youth Sport Manager"
+    org: "Boys and Girls Club, Waco, TX"
+    period: "2018 – 2019"
+  - role: "Project Manager"
+    org: "Sinovest LLC, Raleigh, NC"
+    period: "2017 – 2018"
+  - role: "Financial Analyst"
+    org: "Sinovest LLC, Raleigh, NC"
+    period: "2016 – 2017"

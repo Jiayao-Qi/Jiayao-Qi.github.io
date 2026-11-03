@@ -1,0 +1,19 @@
+---
+layout: default
+title: Page not found
+permalink: /404.html
+description: "This page could not be found."
+---
+<section class="stage lost" aria-labelledby="lost-h">
+  <div class="stage-content wrap">
+    <div class="stage-text">
+      <p class="stage-pill caption-3">Error 404</p>
+      <h1 id="lost-h" class="hero-name">This page left the game.</h1>
+      <p class="hero-summary body-3">The link may be out of date, or the page has moved. Everything else is still here.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary button-md" href="{{ '/' | relative_url }}">{% include icons/arrow-left.svg %}Back to home</a>
+        <a class="btn btn-ghost button-md" href="{{ '/publications/' | relative_url }}">Publications</a>
+      </div>
+    </div>
+  </div>
+</section>

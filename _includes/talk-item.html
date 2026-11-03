@@ -1,0 +1,18 @@
+{%- assign talk = include.talk -%}
+{%- assign talk_s = talk.date | date: "%s" | plus: 0 -%}
+{%- assign now_s = site.time | date: "%s" | plus: 0 -%}
+<li class="work">
+  <p class="work-when caption-4">{{ talk.date | date: "%b %Y" }}</p>
+  <div class="work-main">
+    <h3 class="work-title title-3">{{ talk.title }}</h3>
+    <p class="work-meta body-6">{{ talk.event }}, {{ talk.location }}. {{ talk.dates }}</p>
+    <p class="work-authors caption-5">{{ talk.authors | replace: "Qi, J. C.", "<strong>Qi, J. C.</strong>" }}</p>
+  </div>
+  <div class="work-side">
+    {%- if talk_s > now_s %}<span class="badge badge-accent">Upcoming</span>{% endif %}
+    {%- if talk.format %}<span class="badge">{{ talk.format }}</span>{% endif %}
+    {%- if talk.slides %}
+    <a class="more" href="{{ talk.slides }}" target="_blank" rel="noopener">Slides{% include icons/arrow-up-right.svg %}<span class="sr-only"> for {{ talk.title }} (opens in a new tab)</span></a>
+    {%- endif %}
+  </div>
+</li>

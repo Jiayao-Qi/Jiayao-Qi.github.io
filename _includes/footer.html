@@ -1,0 +1,11 @@
+{%- assign p = site.data.profile -%}
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="title-3">{{ p.name }} <span class="zh muted">{{ p.name_zh }}</span></p>
+      <p class="body-6 muted">{{ p.title }}, {{ p.institution }}</p>
+    </div>
+    {% include contact-links.html %}
+    <p class="footer-note caption-5">&copy; {{ site.time | date: "%Y" }} Jiayao Qi. Last updated {{ site.time | date: "%B %-d, %Y" }}.</p>
+  </div>
+</footer>

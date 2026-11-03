@@ -1,0 +1,72 @@
+# Courses taught, grouped by institution. Newest institution first.
+
+instructor:
+  - institution: "Southern Methodist University"
+    period: "Spring 2026 – present"
+    courses:
+      - code: "APSM 4371"
+        name: "Revenue in Sports"
+      - code: "APSM 4315"
+        name: "Senior Project"
+      - code: "APSM 4345"
+        name: "Sport Marketing"
+      - code: "APSM 4375"
+        name: "Sports Data and Analytics"
+
+  - institution: "Indiana University Bloomington"
+    period: "Fall 2024 – 2025"
+    courses:
+      - code: "SPH-M 304"
+        name: "Human Resource and Career Outlook in Sport"
+      - code: "SPH-M 423"
+        name: "Financial Principles in Sport"
+      - code: "SPH-M 425"
+        name: "Sport Governance in Global Communication"
+      - code: "SPH-M 518"
+        name: "Governance in Sport Management"
+        level: "Graduate"
+      - code: "SPH-M 615"
+        name: "Financial Analysis in Sport"
+        level: "Graduate"
+      - code: "SPH-M 520"
+        name: "Research Method in Sport Management"
+        level: "Graduate"
+      - code: "SPH-K 693"
+        name: "Independent Study & Research"
+        level: "Graduate"
+
+  - institution: "University of South Carolina"
+    period: "Fall 2021 – Spring 2024"
+    courses:
+      - code: "SPTE 490"
+        name: "Sport Governance"
+        period: "Fall 2021 – Spring 2023"
+      - code: "SPTE 440"
+        name: "Sport & Entertainment Business and Finance"
+        period: "Fall 2022 – Spring 2024"
+
+assistant:
+  - institution: "University of South Carolina"
+    role: "Teaching Assistant"
+    course: "SPTE 110: Sport and Entertainment in American Life"
+    period: "Fall 2020 – Spring 2021"
+  - institution: "Baylor University"
+    role: "Academic Mentor and Consultation"
+    period: "Fall 2018 – Spring 2020"
+
+guest:
+  - course: "SPTE 580: Business Principles in Sport Management"
+    term: "Spring 2021"
+    topic: "Structure of sport organizations, decision making pyramid and procedure"
+  - course: "SPTE 580: Business Principles in Sport Management"
+    term: "Fall 2021"
+    topic: "Financial decisions in sport management"
+  - course: "SPTE 440: Sport & Entertainment Business and Finance"
+    term: "Fall 2021"
+    topic: "Introduction to the capital asset pricing model (CAPM)"
+
+advising:
+  - role: "Faculty advisor"
+    detail: "Undergraduate Case Study Competition, Sport Entertainment & Venues Tomorrow Conference (Columbia, SC)"
+    institution: "Indiana University Bloomington"
+    term: "Fall 2024"

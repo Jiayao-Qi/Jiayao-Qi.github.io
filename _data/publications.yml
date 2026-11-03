@@ -1,0 +1,98 @@
+# Publications shown on the site. Newest first within each group.
+# To add a paper, copy an entry and edit it. "area" links it to a research area:
+#   careers  = organizational behavior (passion, careers, well-being)
+#   fandom   = sport marketing (fans, digital communities, AI)
+# "status" is optional: use it for "In press", "Forthcoming", or "Advance online publication".
+
+journal:
+  - authors: "Qi, J. C., Magnusen, M. J., Todd, S. Y., Bae, D., & Byon, K. K."
+    year: 2026
+    title: "When passion for sport jobs is exciting, and when it isn't: A biometric approach"
+    venue: "Journal of Sport Management"
+    details: "40(6), 431–442"
+    doi: "10.1123/jsm.2025-0331"
+    area: careers
+    featured: true
+
+  - authors: "Qi, J. C., Jiang, B. S., Byon, K. K., & Pedersen, P. M."
+    year: 2026
+    title: "Glocalized digital tribalism: A comparative analysis of digital fandom profiling"
+    venue: "International Journal of Sports Marketing and Sponsorship"
+    status: "Advance online publication"
+    doi: "10.1108/IJSMS-03-2026-0210"
+    area: fandom
+    featured: true
+
+  - authors: "Jiang, B. S., Qi, J. C., & Byon, K. K."
+    year: "in press"
+    title: "One brand, different conversations: Reddit fan discourse on men's and women's March Madness"
+    venue: "International Journal of Sport Communication"
+    status: "In press"
+    area: fandom
+    featured: true
+
+  - authors: "Todd, S. Y., Magnusen, M. J., Swanson, S., & Qi, J. C."
+    year: "in press"
+    title: "How selective are sport job seekers? Investigating how application decisions are made in the sport industry"
+    venue: "International Journal of Sport Management and Marketing"
+    status: "In press"
+    area: careers
+
+  - authors: "Qi, J. C., Magnusen, M. J., & Todd, S. Y."
+    year: 2024
+    title: "Passion in sport management research: Looking back to move ahead"
+    venue: "Journal of Applied Sport Management"
+    details: "16(4), 44–50"
+    doi: "10.7290/jasm16onrk"
+    area: careers
+
+  - authors: "Qi, J. C., & Todd, S. Y."
+    year: 2023
+    title: "Industry interactions and their influence on dreams, goals, work interests, and vocational attitude of sport industry job seekers"
+    venue: "Journal of Applied Sport Management"
+    details: "15(1), 8–17"
+    doi: "10.7290/jasm153900"
+    area: careers
+
+  - authors: "Qi, J. C., Magnusen, M. J., & Petersen, J. C."
+    year: 2023
+    title: "Assessing the impact of gender and expertise in athletic product endorsement in China"
+    venue: "The Sport Journal"
+    area: fandom
+
+proceedings:
+  - authors: "Jiang, B. S., Qi, J. C., & Roh, S."
+    year: "in press"
+    title: "How fans co-create Grand Slam brand meanings: A comparative analysis of Reddit tennis discourse"
+    venue: "Proceedings of the 60th Hawaii International Conference on System Sciences"
+    status: "In press"
+    area: fandom
+
+chapters:
+  - authors: "Kim, M., Dahlin, S., Qi, J. C., Yeh, T.-L., Oja, B. D., & Lower-Hoppe, L. M."
+    year: "in press"
+    title: "Broaden-and-build positive emotions theory"
+    venue: "In G. Abeza, J. R. Braunstein-Minkove, N. O'Reilly, & K. J. A. Agyemang (Eds.), Theory in sport management: Insights and applications. Routledge"
+    status: "In press"
+    area: careers
+
+  - authors: "Qi, J. C."
+    year: "forthcoming"
+    title: "Well-being in sport"
+    venue: "In P. M. Pedersen (Ed.), Encyclopedia of sport management (3rd ed.). Edward Elgar Publishing"
+    status: "Forthcoming"
+    area: careers
+
+  - authors: "Qi, J. C."
+    year: "forthcoming"
+    title: "Passion in sport"
+    venue: "In P. M. Pedersen (Ed.), Encyclopedia of sport management (3rd ed.). Edward Elgar Publishing"
+    status: "Forthcoming"
+    area: careers
+
+  - authors: "Qi, J. C."
+    year: "forthcoming"
+    title: "Employment"
+    venue: "In P. M. Pedersen (Ed.), Encyclopedia of sport management (3rd ed.). Edward Elgar Publishing"
+    status: "Forthcoming"
+    area: careers

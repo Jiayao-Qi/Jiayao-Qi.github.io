@@ -1,0 +1,17 @@
+{%- assign pub = include.pub -%}
+<li class="work" data-area="{{ pub.area }}">
+  <p class="work-when caption-4">{{ pub.year | capitalize }}</p>
+  <div class="work-main">
+    <h3 class="work-title title-3">{{ pub.title }}</h3>
+    <p class="work-meta body-6">{{ pub.venue }}{% if pub.details %}, {{ pub.details }}{% endif %}</p>
+    <p class="work-authors caption-5">{{ pub.authors | replace: "Qi, J. C.", "<strong>Qi, J. C.</strong>" }}</p>
+  </div>
+  <div class="work-side">
+    {%- assign year_s = pub.year | append: "" | downcase -%}
+    {%- assign status_s = pub.status | downcase -%}
+    {%- if pub.status and year_s != status_s %}<span class="badge">{{ pub.status }}</span>{% endif %}
+    {%- if pub.doi %}
+    <a class="more" href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">DOI{% include icons/arrow-up-right.svg %}<span class="sr-only"> for {{ pub.title }} (opens in a new tab)</span></a>
+    {%- endif %}
+  </div>
+</li>

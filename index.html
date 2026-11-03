@@ -1,0 +1,105 @@
+---
+layout: default
+---
+{%- assign p = site.data.profile -%}
+<section class="stage" aria-labelledby="hero-name">
+  <div class="stage-content wrap">
+    <div class="stage-text">
+      <p class="stage-pill caption-3">Sport management &middot; <span class="long">{{ p.institution }}</span><span class="short">SMU</span></p>
+      <h1 id="hero-name">
+        <span class="hero-name">{{ p.name }}</span>
+        <span class="hero-zh zh" lang="zh-CN">{{ p.name_zh }}</span>
+      </h1>
+      <div class="hero-role">
+        <p class="title-1">{{ p.title }}</p>
+        <p class="hero-summary body-3">{{ p.summary }}</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary button-md" href="{{ '/cv/' | relative_url }}">View CV{% include icons/arrow-up-right.svg %}</a>
+        <a class="btn btn-ghost button-md" href="{{ '/research/' | relative_url }}">My research</a>
+      </div>
+    </div>
+    <figure class="stage-portrait">
+      <picture>
+        <source srcset="{{ '/assets/img/headshot.webp' | relative_url }}" type="image/webp">
+        <img src="{{ '/assets/img/headshot.jpg' | relative_url }}" width="880" height="1100" alt="Portrait of {{ p.name }} in a dark suit, seated in a bright office" fetchpriority="high">
+      </picture>
+    </figure>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="about-h">
+  <div class="wrap about">
+    <h2 id="about-h" class="heading-5">About</h2>
+    <div class="about-text">
+      <p class="body-3">{{ p.about }}</p>
+      <dl class="stats">
+        <div><dt class="caption-4">Journal articles</dt><dd class="heading-4 tnum">{{ site.data.publications.journal.size }}</dd></div>
+        <div><dt class="caption-4">Conference presentations</dt><dd class="heading-4 tnum">{{ site.data.talks.size }}</dd></div>
+        <div><dt class="caption-4">Funded grants</dt><dd class="heading-4 tnum">{{ site.data.cv.grants.size }}</dd></div>
+      </dl>
+      <p class="hero-proof caption-5">Recent work in <strong>Journal of Sport Management</strong>, <strong>International Journal of Sports Marketing and Sponsorship</strong>, and <strong>International Journal of Sport Communication</strong>.</p>
+      {% include contact-links.html %}
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="research-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="research-h" class="heading-5">Research</h2>
+      <a class="more" href="{{ '/research/' | relative_url }}">About my research{% include icons/arrow-up-right.svg %}</a>
+    </div>
+    <div class="areas">
+      {%- for a in p.research_areas %}
+      <article class="area">
+        <h3 class="heading-6">{{ a.name }}</h3>
+        <p class="body-3">{{ a.summary }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+    <dl class="methods">
+      {%- for m in p.methods limit: 4 %}
+      <div>
+        <dt class="title-3">{{ m.name }}</dt>
+        <dd class="body-6">{{ m.detail }}</dd>
+      </div>
+      {%- endfor %}
+    </dl>
+  </div>
+</section>
+
+<section class="tagline" aria-label="Research statement">
+  <div class="wrap">
+    <p data-tagline>{{ p.tagline }}</p>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="pubs-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="pubs-h" class="heading-5">Recent publications</h2>
+      <a class="more" href="{{ '/publications/' | relative_url }}">All publications{% include icons/arrow-up-right.svg %}</a>
+    </div>
+    <ul class="work-list">
+      {%- assign featured = site.data.publications.journal | where: "featured", true -%}
+      {%- for pub in featured %}
+      {% include pub-item.html pub=pub %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="talks-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="talks-h" class="heading-5">Talks</h2>
+      <a class="more" href="{{ '/talks/' | relative_url }}">All talks{% include icons/arrow-up-right.svg %}</a>
+    </div>
+    <ul class="work-list">
+      {%- for talk in site.data.talks limit: 3 %}
+      {% include talk-item.html talk=talk %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="wrap page">
+  <aside class="profile" aria-label="About {{ site.data.profile.name }}">
+    {% include profile-card.html %}
+  </aside>
+  <div class="page-body">
+    <header class="page-head">
+      {%- if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+      <h1 class="page-title">{{ page.title }}</h1>
+      {%- if page.lede %}<p class="lede body-3">{{ page.lede }}</p>{% endif %}
+    </header>
+    {{ content }}
+  </div>
+</div>

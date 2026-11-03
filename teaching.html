@@ -1,0 +1,67 @@
+---
+layout: page
+title: Teaching
+eyebrow: Teaching
+permalink: /teaching/
+description: "Courses taught by Jiayao (Chee) Qi in sport revenue, marketing, analytics, finance, governance, and research methods."
+lede: "I teach sport revenue, marketing, analytics, finance, governance, and research methods to undergraduate and graduate students."
+---
+{%- assign t = site.data.teaching -%}
+<section class="block" aria-labelledby="ior-h">
+  <h2 id="ior-h" class="heading-5">Instructor of record</h2>
+  <div class="rows">
+    {%- for inst in t.instructor %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-2">{{ inst.institution }}</h3>
+        <ul class="course-list body-6">
+          {%- for c in inst.courses %}
+          <li><span class="course-code">{{ c.code }}</span><span class="course-name"><span>{{ c.name }}</span>{% if c.level %}<span class="badge">{{ c.level }}</span>{% endif %}{% if c.period %}<span class="muted caption-5">{{ c.period }}</span>{% endif %}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <p class="row-side caption-4">{{ inst.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" aria-labelledby="ta-h">
+  <h2 id="ta-h" class="heading-5">Teaching support and mentoring</h2>
+  <div class="rows">
+    {%- for a in t.assistant %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ a.role }}</h3>
+        <p class="body-6 muted">{% if a.course %}{{ a.course }}, {% endif %}{{ a.institution }}</p>
+      </div>
+      <p class="row-side caption-4">{{ a.period }}</p>
+    </div>
+    {%- endfor %}
+    {%- for a in t.advising %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ a.role }}</h3>
+        <p class="body-6 muted">{{ a.detail }}, {{ a.institution }}</p>
+      </div>
+      <p class="row-side caption-4">{{ a.term }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" aria-labelledby="guest-h">
+  <h2 id="guest-h" class="heading-5">Guest lectures</h2>
+  <p class="body-6 muted" style="margin-bottom: var(--s-200)">University of South Carolina</p>
+  <div class="rows">
+    {%- for g in t.guest %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ g.topic }}</h3>
+        <p class="body-6 muted">{{ g.course }}</p>
+      </div>
+      <p class="row-side caption-4">{{ g.term }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

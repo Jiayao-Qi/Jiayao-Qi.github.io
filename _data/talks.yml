@@ -1,0 +1,138 @@
+# Conference presentations, newest first.
+# "date" is the first day (YYYY-MM-DD) and decides the order and the "Upcoming" label.
+# "dates" is what visitors see. Add "slides:" with a link to show a Slides button.
+
+- authors: "Jiang, B. S., Qi, J. C., & Roh, S."
+  date: 2027-01-05
+  dates: "January 5–8, 2027"
+  title: "How fans co-create Grand Slam brand meanings: A comparative analysis of Reddit tennis discourse"
+  event: "Hawaii International Conference on System Sciences"
+  location: "Waikoloa, HI"
+
+- authors: "Qi, J. C., Jiang, B. S., Byon, K. K., Pedersen, P. M., & Bae, D."
+  date: 2026-10-28
+  dates: "October 28–30, 2026"
+  title: "Glocalized digital tribalism: A comparative analysis of digital fandom profiling"
+  event: "Sport Marketing Association"
+  location: "Baltimore, MD"
+
+- authors: "Bae, D., Oh, J., & Qi, J. C."
+  date: 2026-10-28
+  dates: "October 28–30, 2026"
+  title: "Matching AI and human recommendations with message appeal and framing: A construal-level account of fitness membership promotions"
+  event: "Sport Marketing Association"
+  location: "Baltimore, MD"
+
+- authors: "Oja, B. D., Qi, J. C., Hill, C., Zvosec, C. C., Do, C., & Kim, M."
+  date: 2026-09-15
+  dates: "September 15–18, 2026"
+  title: "Identifying positive emotions in the sport workplace: Assessing employee reactions via semantic differential methodology"
+  event: "European Association for Sport Management"
+  location: "Thessaloniki, Greece"
+
+- authors: "Bae, D., Oh, J., Qi, J. C., & Byon, K. K."
+  date: 2026-05-26
+  dates: "May 26–29, 2026"
+  title: "Can machines feel the game? Exploring empathy and enjoyment in artificial intelligence vs. human sport commentators"
+  event: "North American Society for Sport Management"
+  location: "San Juan, PR"
+
+- authors: "Jiang, B. S., Byon, K. K., Qi, J. C., & Pedersen, P. M."
+  date: 2026-05-26
+  dates: "May 26–29, 2026"
+  title: "Online fan narratives in the 2024 Australian Open: Insights from Reddit topic modeling"
+  event: "North American Society for Sport Management"
+  location: "San Juan, PR"
+
+- authors: "Qi, J. C., Jiang, B. S., Bae, D., & Byon, K. K."
+  date: 2026-04-24
+  dates: "April 24–25, 2026"
+  title: "From narratives to performance: Quantifying media influence on rising professional athletes"
+  event: "ASA Sports Analytics Conference"
+  location: "Virtual"
+
+- authors: "Bae, D., Shapiro, S. L., & Qi, J. C."
+  date: 2025-10-22
+  dates: "October 22–24, 2025"
+  title: "Gamified AI chatbots in spectator sport: Examining their impact on user gratification and behavioral engagement"
+  event: "Sport Marketing Association"
+  location: "Phoenix, AZ"
+
+- authors: "Qi, J. C."
+  date: 2025-04-11
+  dates: "April 11, 2025"
+  title: "Utilizing debates in large classrooms"
+  event: "Midwest Conference on the Scholarship of Teaching and Learning"
+  location: "South Bend, IN"
+
+- authors: "Qi, J. C., & Huang, Y."
+  date: 2024-09-03
+  dates: "September 3–6, 2024"
+  title: "How team faultlines influence organisational performance in diversified sport industry: The synergistic impact of multiple diversity attributes"
+  event: "European Association for Sport Management"
+  location: "Paris, France"
+
+- authors: "Qi, J. C., Shapiro, S. L., & Todd, S. Y."
+  date: 2024-05-29
+  dates: "May 29 – June 1, 2024"
+  title: "Fandom vs. employment: Examining the impact of team identification on fan and employment outcomes for job seekers"
+  event: "North American Society for Sport Management"
+  location: "Minneapolis, MN"
+
+- authors: "Magnusen, M. J., Qi, J. C., & Todd, S. Y."
+  date: 2023-05-31
+  dates: "May 31 – June 3, 2023"
+  title: "Passion in sport: A systematic literature review and proposed research agenda"
+  event: "North American Society for Sport Management"
+  location: "Montreal, Québec, Canada"
+
+- authors: "Qi, J. C., & Todd, S. Y."
+  date: 2022-11-16
+  dates: "November 16–18, 2022"
+  title: "Industry interactions and their influence on dreams, goals, work interests, and vocational attitude of sport industry job seekers"
+  event: "Sport Entertainment & Venues Tomorrow"
+  location: "Columbia, SC"
+
+- authors: "Qi, J. C., & Todd, S. Y."
+  date: 2022-09-05
+  dates: "September 5–8, 2022"
+  title: "Why some passions lead to career aspirations and others do not: A study of job seekers in sport"
+  event: "European Association for Sport Management"
+  location: "Innsbruck, Austria"
+
+- authors: "Qi, J. C., & Todd, S. Y."
+  date: 2022-06-02
+  dates: "June 2–4, 2022"
+  title: "Passion for work in sport: A deep dive into its origin, growth, and trajectory"
+  event: "North American Society for Sport Management"
+  location: "Atlanta, GA"
+
+- authors: "Judge, L. W., Petersen, J. C., & Qi, J. C."
+  date: 2021-10-20
+  dates: "October 20–22, 2021"
+  title: "Buenos Aires 2018 Youth Olympic Games awareness and consumption intention: An analysis of local residents"
+  event: "Sport Marketing Association"
+  location: "Las Vegas, NV"
+  format: "Poster"
+
+- authors: "Qi, J. C., Magnusen, M. J., & Petersen, J. C."
+  date: 2021-02-16
+  dates: "February 16–18, 2021"
+  title: "Do gender and expertise matter? An exploration of athletic product endorsement in China"
+  event: "Applied Sport Management Association"
+  location: "Kerrville, TX (virtual)"
+
+- authors: "Magnusen, M. J., Qi, J. C., & Robinson, M."
+  date: 2020-02-27
+  dates: "February 27–29, 2020"
+  title: "Entering the fray: How athletic director political communication can influence sport consumer attitudes and consumption behavior"
+  event: "Applied Sport Management Association"
+  location: "Waco, TX"
+
+- authors: "Qi, J. C., Finch, A. P., Klotz, M. K., & Petersen, J. C."
+  date: 2019-04-03
+  dates: "April 3–5, 2019"
+  title: "Stadium location impacts on revenue generation in Power 5 schools"
+  event: "College Sport Research Institute Conference"
+  location: "Columbia, SC"
+  format: "Poster"

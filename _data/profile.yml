@@ -1,0 +1,57 @@
+# Who you are. Shown in the sidebar, hero, and page footer.
+name: "Jiayao (Chee) Qi"
+name_zh: "戚佳耀"
+short_name: "Chee Qi"
+title: "Clinical Assistant Professor of Sport Management"
+institution: "Southern Methodist University"
+location: "Dallas, Texas"
+email: "jcqi@smu.edu"
+cv_pdf: "/files/Jiayao_Qi_CV.pdf"
+
+links:
+  - label: "LinkedIn"
+    url: "https://www.linkedin.com/in/qi-jiayao/"
+    icon: "linkedin-logo"
+  - label: "ORCID"
+    url: "https://orcid.org/0000-0003-3376-9812"
+    icon: "orcid"
+
+# One or two sentences under your name on the home page.
+summary: >-
+  I study how passion for sport shapes careers, emotions, and fandom.
+  My work pairs biometrics with large scale analysis of fan and media discourse.
+
+# The About paragraph beside your portrait on the home page.
+about: >-
+  I am a Clinical Assistant Professor of Sport Management at Southern Methodist University.
+  I earned my Ph.D. in Sport and Entertainment Management at the University of South Carolina
+  and taught at Indiana University Bloomington before joining SMU. My research connects
+  organizational behavior and sport marketing, with methods that range from biometrics to
+  large language models.
+
+# The large statement that lights up word by word on the home page.
+tagline: "Many sport professionals begin as fans. My research follows that passion from the stands into the workplace."
+
+research_areas:
+  - name: "Organizational behavior"
+    summary: >-
+      How passion shapes career attraction, emotions, well-being, and turnover
+      among sport job seekers and employees.
+  - name: "Sport marketing"
+    summary: >-
+      Fandom and team identification, particularly in digital fan communities,
+      and how fans respond to AI commentators, chatbots, and personalized marketing.
+
+methods:
+  - name: "Biometrics"
+    detail: "Galvanic skin response, EEG, eye tracking, and facial expression analysis in iMotions"
+  - name: "Data science and AI"
+    detail: "Natural language processing, topic modeling, machine learning, and large language models in Python"
+  - name: "Data acquisition"
+    detail: "Web scraping and APIs in Python and R"
+  - name: "Statistics"
+    detail: "Multilevel modeling in R, SPSS, and HLM 8.0"
+  - name: "Qualitative analysis"
+    detail: "Content analysis and coding in NVivo"
+
+languages: "Chinese (native) and English (proficient)"
