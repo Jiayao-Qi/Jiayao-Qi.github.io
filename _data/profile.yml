@@ -99,9 +99,9 @@ theory: >-
 methods_intro: >-
   Because emotion is difficult to self-report, I measure it directly in the lab and pair
   that with computational analysis of large text corpora, at a scale interviews cannot
-  reach. I also run social experiments analyzed with multilevel and Bayesian models, and
-  I collect recorded voice answers online so that qualitative studies can reach larger
-  samples.
+  reach. I also run social experiments analyzed with multilevel modeling, including
+  hierarchical linear modeling, and Bayesian analysis, and I collect qualitative data
+  through asynchronous audio responses recorded online.
 methods:
   - name: "Biometrics"
     detail: "Galvanic skin response, EEG, eye tracking, and facial expression analysis in iMotions"
