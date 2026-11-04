@@ -1,11 +1,11 @@
-{%- assign p = site.data.profile -%}
+{%- include lang.html -%}
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <p class="title-3">{{ p.name }} <span class="zh muted">{{ p.name_zh }}</span></p>
-      <p class="body-6 muted">{{ p.title }}, {{ p.institution }}</p>
+      <p class="title-3">{{ p.display_name }} <span class="muted" lang="{{ p.alt_lang }}">{{ p.alt_name }}</span></p>
+      <p class="body-6 muted">{{ p.title }}{% if lang == "zh" %}，{% else %}, {% endif %}{{ p.institution }}</p>
     </div>
     {% include contact-links.html %}
-    <p class="footer-note caption-5">&copy; {{ site.time | date: "%Y" }} Jiayao Qi. Last updated {{ site.time | date: "%B %-d, %Y" }}.</p>
+    <p class="footer-note caption-5">&copy; {{ site.time | date: "%Y" }} {{ t.footer_owner }}{% if lang == "zh" %} · {% else %}. {% endif %}{{ t.footer_updated }} {{ site.time | date: t.date_long }}{% if lang == "zh" %}{% else %}.{% endif %}</p>
   </div>
 </footer>

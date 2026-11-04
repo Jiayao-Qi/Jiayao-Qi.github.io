@@ -26,6 +26,8 @@ Manrope, weights 400, 500, 600. No italics. Chinese characters use Noto Sans SC 
 
 Named styles in CSS: `heading-1` 60/60 through `heading-6` 20/28 (semibold), `title-1` 20/28 through `title-4` 14/20 (medium), `body-3` 16/24, `body-5` and `body-6` 14/20, `button-md` 16/24, `button-sm` 14/20, `caption-3` to `caption-5` 12/16. Do not introduce other sizes.
 
+Chinese pages use Noto Sans SC for CJK glyphs. Because CJK characters fill the whole em box, Chinese display text, headings, and body copy get a larger line height and slightly open tracking than the Latin scale specifies (see the `html[lang="zh-CN"]` rules at the end of `site.css`).
+
 ## Spacing and radius
 
 Spacing: 2, 4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96 (`--s-25` to `--s-900`). Radius: 4, 6, 8, 12, 16, 24, full. Nested radius equals the outer radius minus the gap (portrait card: 24 outer, 8 padding, 16 inner).

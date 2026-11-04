@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
+{%- include lang.html -%}
 <div class="wrap page">
-  <aside class="profile" aria-label="About {{ site.data.profile.name }}">
+  <aside class="profile" aria-label="{{ t.about_aria }}">
     {% include profile-card.html %}
   </aside>
   <div class="page-body">

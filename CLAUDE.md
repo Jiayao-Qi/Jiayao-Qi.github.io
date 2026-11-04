@@ -10,6 +10,10 @@ Never publish: articles in review, articles in progress, grants under review or 
 
 Publication details must come from the owner's CV or the publisher's record (Crossref). Never invent numbers, titles, DOIs, or co-authors. Bold the owner's name with the existing `replace` filter in the includes; do not hard code `<strong>` in data.
 
+## Two languages
+
+English is the default; Chinese pages are under `/zh/` and share the page bodies in `_includes/pages/`. Every text change in `profile.yml`, `cv.yml`, or `teaching.yml` must be mirrored in the `_zh` file, in natural Chinese. Publication titles, journal, course, and conference names stay in English. The privacy rules apply to both languages.
+
 ## Visual system
 
 Follow `DESIGN.md`. In short: Manrope only, no italics, sizes from the fixed type scale, spacing from the fixed spacing scale, nested radius = outer radius minus gap, flat backgrounds, the `--ease` curve for motion, and every color from the tokens in `assets/css/site.css` (light and dark).

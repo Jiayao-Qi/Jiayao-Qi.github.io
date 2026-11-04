@@ -1,14 +1,16 @@
+{%- include lang.html -%}
 <!doctype html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="{{ t.html_lang }}">
 <head>
 {% include head.html %}
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">{{ t.skip }}</a>
 {% include nav.html %}
 <main id="main">
 {{ content }}
 </main>
 {% include footer.html %}
+{% include lang-toggle.html %}
 </body>
 </html>

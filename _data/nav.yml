@@ -1,12 +1,13 @@
-- label: "Home"
+# Labels come from _data/i18n.yml (nav.<key>); Chinese pages add /zh in front of each url.
+- key: home
   url: "/"
-- label: "Research"
+- key: research
   url: "/research/"
-- label: "Publications"
+- key: publications
   url: "/publications/"
-- label: "Talks"
+- key: talks
   url: "/talks/"
-- label: "Teaching"
+- key: teaching
   url: "/teaching/"
-- label: "CV"
+- key: cv
   url: "/cv/"

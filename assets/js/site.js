@@ -61,14 +61,17 @@
   /* Tagline: each word moves from muted to full as it crosses a line on screen */
   var tagline = document.querySelector("[data-tagline]");
   if (tagline && !reduce) {
-    var text = tagline.textContent.trim().split(/\s+/);
+    var isZh = (document.documentElement.lang || "").toLowerCase().indexOf("zh") === 0;
+    var raw = tagline.textContent.trim();
+    var text = isZh ? Array.from(raw) : raw.split(/\s+/);
+    var step = isZh ? 2 : 6;
     tagline.textContent = "";
     var words = text.map(function (w, i) {
       var span = document.createElement("span");
       span.className = "w";
       span.textContent = w;
       tagline.appendChild(span);
-      if (i < text.length - 1) tagline.appendChild(document.createTextNode(" "));
+      if (!isZh && i < text.length - 1) tagline.appendChild(document.createTextNode(" "));
       return span;
     });
     var ticking = false;
@@ -77,7 +80,7 @@
       var line = window.innerHeight * 0.72;
       words.forEach(function (w, i) {
         var r = w.getBoundingClientRect();
-        var on = r.top + r.height / 2 < line - i * 6;
+        var on = r.top + r.height / 2 < line - i * step;
         w.classList.toggle("on", on);
       });
     };
@@ -116,7 +119,7 @@
         if (count) count.textContent = visible;
       });
       if (empty) empty.hidden = shown !== 0;
-      if (status) status.textContent = shown + (shown === 1 ? " item" : " items") + " shown";
+      if (status) status.textContent = (status.getAttribute("data-template") || "%n items shown").replace("%n", shown);
     });
   }
 })();

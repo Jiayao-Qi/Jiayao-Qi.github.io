@@ -2,17 +2,21 @@
 {%- assign talk_s = talk.date | date: "%s" | plus: 0 -%}
 {%- assign now_s = site.time | date: "%s" | plus: 0 -%}
 <li class="work">
-  <p class="work-when caption-4">{{ talk.date | date: "%b %Y" }}</p>
+  <p class="work-when caption-4">{{ talk.date | date: t.month_year }}</p>
   <div class="work-main">
-    <h3 class="work-title title-3">{{ talk.title }}</h3>
+    <h3 class="work-title title-3" lang="en">{{ talk.title }}</h3>
+    {%- if lang == "zh" %}
+    <p class="work-meta body-6"><span lang="en">{{ talk.event }}</span>，<span lang="en">{{ talk.location }}</span></p>
+    {%- else %}
     <p class="work-meta body-6">{{ talk.event }}, {{ talk.location }}. {{ talk.dates }}</p>
-    <p class="work-authors caption-5">{{ talk.authors | replace: "Qi, J. C.", "<strong>Qi, J. C.</strong>" }}</p>
+    {%- endif %}
+    <p class="work-authors caption-5" lang="en">{{ talk.authors | replace: "Qi, J. C.", "<strong>Qi, J. C.</strong>" }}</p>
   </div>
   <div class="work-side">
-    {%- if talk_s > now_s %}<span class="badge badge-accent">Upcoming</span>{% endif %}
-    {%- if talk.format %}<span class="badge">{{ talk.format }}</span>{% endif %}
+    {%- if talk_s > now_s %}<span class="badge badge-accent">{{ t.upcoming }}</span>{% endif %}
+    {%- if talk.format %}<span class="badge">{% if talk.format == "Poster" %}{{ t.poster }}{% else %}{{ talk.format }}{% endif %}</span>{% endif %}
     {%- if talk.slides %}
-    <a class="more" href="{{ talk.slides }}" target="_blank" rel="noopener">Slides{% include icons/arrow-up-right.svg %}<span class="sr-only"> for {{ talk.title }} (opens in a new tab)</span></a>
+    <a class="more" href="{{ talk.slides }}" target="_blank" rel="noopener">{{ t.slides }}{% include icons/arrow-up-right.svg %}<span class="sr-only"> {{ t.for }} {{ talk.title }} {{ t.new_tab }}</span></a>
     {%- endif %}
   </div>
 </li>

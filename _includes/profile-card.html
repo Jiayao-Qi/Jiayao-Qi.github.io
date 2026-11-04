@@ -1,17 +1,17 @@
-{%- assign p = site.data.profile -%}
+{%- include lang.html -%}
 <div class="profile-card">
   <picture>
     <source srcset="{{ '/assets/img/avatar.webp' | relative_url }}" type="image/webp">
-    <img src="{{ '/assets/img/avatar.jpg' | relative_url }}" width="400" height="400" alt="Portrait of {{ p.name }}">
+    <img src="{{ '/assets/img/avatar.jpg' | relative_url }}" width="400" height="400" alt="{{ t.avatar_alt }}">
   </picture>
   <div class="profile-id">
-    <p class="title-2">{{ p.name }}</p>
-    <p class="body-6 muted"><span class="zh">{{ p.name_zh }}</span></p>
-    <p class="body-6 muted">{{ p.title }}, {{ p.institution }}</p>
+    <p class="title-2">{{ p.display_name }}</p>
+    <p class="body-6 muted"><span lang="{{ p.alt_lang }}">{{ p.alt_name }}</span></p>
+    <p class="body-6 muted">{{ p.title }}{% if lang == "zh" %}，{% else %}, {% endif %}{{ p.institution }}</p>
   </div>
   <ul class="profile-meta body-6">
     <li>{% include icons/map-pin.svg %}<span>{{ p.location }}</span></li>
-    <li>{% include icons/file-pdf.svg %}<a class="link" href="{{ p.cv_pdf | relative_url }}">Curriculum vitae (PDF)</a></li>
+    <li>{% include icons/file-pdf.svg %}<a class="link" href="{{ p.cv_pdf | relative_url }}">{{ t.cv_pdf }}</a></li>
   </ul>
   {% include contact-links.html %}
 </div>

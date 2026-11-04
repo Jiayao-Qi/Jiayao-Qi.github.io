@@ -1,0 +1,185 @@
+{%- include lang.html -%}
+{%- if lang == "zh" -%}{%- assign sep = "，" -%}{%- assign dot = "。" -%}{%- assign gsep = " · " -%}{%- else -%}{%- assign sep = ", " -%}{%- assign dot = ". " -%}{%- assign gsep = ". " -%}{%- endif -%}
+
+<div class="cv-actions">
+  <a class="btn btn-primary button-md" href="{{ p.cv_pdf | relative_url }}">{% include icons/download-simple.svg %}{{ t.cv_page.download }}</a>
+</div>
+<nav class="jump" aria-label="{{ t.cv_page.jump_aria }}">
+  <a class="icon-link" href="#education">{{ t.cv_page.education }}</a>
+  <a class="icon-link" href="#appointments">{{ t.cv_page.appointments_short }}</a>
+  <a class="icon-link" href="#grants">{{ t.cv_page.grants_short }}</a>
+  <a class="icon-link" href="#awards">{{ t.cv_page.awards_short }}</a>
+  <a class="icon-link" href="#service">{{ t.cv_page.service }}</a>
+  <a class="icon-link" href="#experience">{{ t.cv_page.experience_short }}</a>
+</nav>
+
+<section class="block cv-first" id="education" aria-labelledby="edu-h">
+  <h2 id="edu-h" class="heading-5">{{ t.cv_page.education }}</h2>
+  <div class="rows">
+    {%- for e in cvd.education %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ e.degree }}</h3>
+        <p class="body-6 muted">{{ e.school }}</p>
+        {%- if e.note %}<p class="caption-5 muted">{{ e.note }}</p>{% endif %}
+      </div>
+      <p class="row-side caption-4">{{ e.year }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" id="appointments" aria-labelledby="app-h">
+  <h2 id="app-h" class="heading-5">{{ t.cv_page.appointments }}</h2>
+  <div class="rows">
+    {%- for a in cvd.appointments %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ a.role }}</h3>
+        <p class="body-6 muted">{{ a.institution }}</p>
+        <ul class="points body-6">
+          {%- for pt in a.points %}<li>{{ pt }}</li>{% endfor %}
+        </ul>
+      </div>
+      <p class="row-side caption-4">{{ a.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" id="publications-summary" aria-labelledby="pub-h">
+  <h2 id="pub-h" class="heading-5">{{ t.cv_page.pubs }}</h2>
+  <div class="rows">
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ t.cv_page.pubs_line | replace: "%j", site.data.publications.journal.size | replace: "%p", site.data.publications.proceedings.size | replace: "%c", site.data.publications.chapters.size }}</h3>
+        <p class="body-6"><a class="link" href="{{ prefix | append: '/publications/' | relative_url }}">{{ t.cv_page.see_pubs }}</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ t.cv_page.talks_line | replace: "%n", site.data.talks.size }}</h3>
+        <p class="body-6"><a class="link" href="{{ prefix | append: '/talks/' | relative_url }}">{{ t.cv_page.see_talks }}</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="grants" aria-labelledby="grants-h">
+  <h2 id="grants-h" class="heading-5">{{ t.cv_page.grants }}</h2>
+  <div class="rows">
+    {%- for g in cvd.grants %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3" lang="en">{{ g.title }}</h3>
+        <p class="body-6 muted">{{ g.funder }}{{ gsep }}{{ g.role }}{{ gsep }}{{ g.amount }}</p>
+      </div>
+      <p class="row-side caption-4">{{ g.year }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" id="awards" aria-labelledby="awards-h">
+  <h2 id="awards-h" class="heading-5">{{ t.cv_page.awards }}</h2>
+  <div class="rows">
+    {%- for a in cvd.awards %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ a.name }}</h3>
+        <p class="body-6 muted">{{ a.from }}</p>
+      </div>
+      <p class="row-side caption-4">{{ a.year }}</p>
+    </div>
+    {%- endfor %}
+    {%- for c in cvd.certifications %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ c.name }}</h3>
+        <p class="body-6 muted">{{ c.note }}</p>
+      </div>
+      <p class="row-side caption-4">{{ c.year }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" id="service" aria-labelledby="service-h">
+  <h2 id="service-h" class="heading-5">{{ t.cv_page.service }}</h2>
+
+  <h3 class="heading-6 sub-head">{{ t.cv_page.doctoral }}</h3>
+  <div class="rows">
+    {%- for d in cvd.doctoral_committees %}
+    <div class="row">
+      <div class="row-main">
+        <p class="title-3">{{ d.student }}{{ sep }}{{ d.institution }}</p>
+        <p class="body-6 muted">{{ t.cv_page.dissertation }} <span lang="en">{{ d.dissertation }}</span></p>
+      </div>
+      <p class="row-side caption-4">{{ d.year }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h3 class="heading-6 sub-head">{{ t.cv_page.editorial }}</h3>
+  <div class="rows">
+    {%- for e in cvd.editorial %}
+    <div class="row">
+      <div class="row-main">
+        <p class="title-3" lang="en">{{ e.name }}</p>
+        <p class="body-6 muted">{{ e.role }}</p>
+      </div>
+      <p class="row-side caption-4">{{ e.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h3 class="heading-6 sub-head">{{ t.cv_page.reviewer }}</h3>
+  <div class="rows">
+    {%- for r in cvd.reviewing %}
+    <div class="row">
+      <div class="row-main">
+        <p class="title-3" lang="en">{{ r.name }}</p>
+      </div>
+      <p class="row-side caption-4">{{ r.detail }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h3 class="heading-6 sub-head">{{ t.cv_page.university }}</h3>
+  <div class="rows">
+    {%- for u in cvd.university_service %}
+    <div class="row">
+      <div class="row-main">
+        <p class="title-3">{{ u.name }}</p>
+        <p class="body-6 muted">{{ u.institution }}{% if u.note %}{{ dot }}{{ u.note }}{% endif %}</p>
+      </div>
+      <p class="row-side caption-4">{{ u.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h3 class="heading-6 sub-head">{{ t.cv_page.affiliations }}</h3>
+  <div class="rows">
+    {%- for a in cvd.affiliations %}
+    <div class="row">
+      <div class="row-main"><p class="title-3">{{ a.name }}</p></div>
+      <p class="row-side caption-4">{{ a.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" id="experience" aria-labelledby="exp-h">
+  <h2 id="exp-h" class="heading-5">{{ t.cv_page.experience }}</h2>
+  <div class="rows">
+    {%- for x in cvd.experience %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ x.role }}</h3>
+        <p class="body-6 muted">{{ x.org }}</p>
+      </div>
+      <p class="row-side caption-4">{{ x.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

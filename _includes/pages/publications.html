@@ -1,0 +1,30 @@
+{%- include lang.html -%}
+{%- assign pubs = site.data.publications -%}
+{%- assign total = pubs.journal.size | plus: pubs.proceedings.size | plus: pubs.chapters.size -%}
+
+<div class="filters" data-filter role="group" aria-label="{{ t.pubs_page.filter_aria }}">
+  <button class="chip" type="button" data-value="all" aria-pressed="true">{{ t.pubs_page.all }}</button>
+  <button class="chip" type="button" data-value="careers" aria-pressed="false">{{ t.pubs_page.careers }}</button>
+  <button class="chip" type="button" data-value="fandom" aria-pressed="false">{{ t.pubs_page.fandom }}</button>
+</div>
+<p class="sr-only" aria-live="polite" data-filter-status data-template="{{ t.pubs_page.shown }}">{{ t.pubs_page.shown | replace: "%n", total }}</p>
+
+{%- assign groups = "journal,proceedings,chapters" | split: "," %}
+{%- for g in groups %}
+<section class="group" data-group aria-labelledby="{{ g }}-h">
+  <div class="group-head">
+    <h2 id="{{ g }}-h" class="heading-6">{{ t.pubs_page[g] }}</h2>
+    <span class="count caption-4" data-count>{{ pubs[g].size }}</span>
+  </div>
+  <ul class="work-list">
+    {%- for pub in pubs[g] %}
+    {% include pub-item.html pub=pub %}
+    {%- endfor %}
+  </ul>
+</section>
+{%- endfor %}
+
+<div class="empty" data-empty hidden>
+  <p class="title-3 fg">{{ t.pubs_page.empty_title }}</p>
+  <p class="body-6">{{ t.pubs_page.empty_body }}</p>
+</div>

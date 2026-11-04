@@ -1,0 +1,153 @@
+# 中文版简历数据。与 cv.yml 一一对应；在审论文、在研论文和未获资助项目同样不公开。
+# 论文、基金项目和期刊名称保留英文原名。
+
+education:
+  - degree: "体育与娱乐管理 博士"
+    school: "南卡罗来纳大学"
+    year: 2024
+    note: "导师：Samuel Todd 博士。委员会成员：Stephen Shapiro 博士、Khalid Ballouli 博士、Taylor Wen 博士。"
+  - degree: "体育管理 教育学硕士"
+    school: "贝勒大学"
+    year: 2020
+  - degree: "金融学 理学硕士"
+    school: "约翰斯·霍普金斯大学"
+    year: 2016
+  - degree: "金融学 工商管理学士"
+    school: "北亚利桑那大学"
+    year: 2015
+
+appointments:
+  - role: "临床助理教授"
+    institution: "南卫理公会大学"
+    period: "2026年至今"
+    points:
+      - "讲授 Revenue in Sports、Senior Project、Sport Marketing 和 Sports Data and Analytics 等课程，共 11 个教学班。"
+      - "任教务长任命的学术申诉委员会成员及研究生招生委员会成员。"
+  - role: "临床助理教授"
+    institution: "印第安纳大学伯明顿分校"
+    period: "2024–2025年"
+    points:
+      - "讲授三门研究生课程、三门本科生课程和两门独立研究课程，共 17 个教学班。"
+      - "开展高校体育领域人力资源管理与组织行为的分析研究。"
+  - role: "主讲教师（博士生期间）"
+    institution: "南卡罗来纳大学"
+    period: "2021–2024年"
+    points:
+      - "讲授两门本科课程，共八个教学班。"
+
+grants:
+  - title: "When passion for sport jobs is exciting, and when it isn't: A biometric approach"
+    funder: "南卫理公会大学开放获取出版资助"
+    role: "项目负责人"
+    year: 2026
+    amount: "2,000 美元"
+  - title: "The personalization-privacy paradox: Fan acceptance of AI-driven marketing in sport"
+    funder: "南卫理公会大学教师科研基金"
+    role: "项目负责人"
+    year: 2026
+    amount: "4,000 美元"
+  - title: "Investigating employee behavior and well-being at Formula One United States Grand Prix"
+    funder: "专业发展基金"
+    role: "项目负责人"
+    year: 2024
+    amount: "3,000 美元"
+  - title: "Fandom vs. employment: Examining the impact of team identification on fan and employment outcomes for job seekers"
+    funder: "南卡罗来纳大学酒店、零售与体育管理学院"
+    role: "项目负责人（合作者：S. L. Shapiro、S. Y. Todd）"
+    year: 2024
+    amount: "1,000 美元"
+  - title: "Passion for work in sport: A deep dive into its origin, growth, and trajectory"
+    funder: "南卡罗来纳大学酒店、零售与体育管理学院"
+    role: "项目负责人（合作者：S. Y. Todd）"
+    year: 2022
+    amount: "1,000 美元"
+
+awards:
+  - name: "年度杰出博士生研究者奖"
+    from: "南卡罗来纳大学酒店、零售与体育管理学院"
+    year: 2023
+
+certifications:
+  - name: "生物识别与用户体验实验室认证"
+    year: 2023
+    note: "系统学习如何运用眼动追踪、面部表情、皮肤电反应和脑电开展行为与心理实验。"
+  - name: "未来教师培养计划（PFF）认证"
+    year: 2021
+    note: "美国研究生院理事会（Council of Graduate Schools）面向博士生的全国性教职培养项目。"
+
+doctoral_committees:
+  - student: "Benqiao (Stella) Jiang"
+    institution: "印第安纳大学伯明顿分校"
+    year: 2026
+    dissertation: "Motivation and Perspectives of Fans Engaging on Online Sport Forums"
+  - student: "Sinhae Roh"
+    institution: "印第安纳大学伯明顿分校"
+    year: 2026
+    dissertation: "The Impact of CSR-Core Business Fit and Message Specificity on Consumer Purchase Intentions of Sporting Goods"
+
+editorial:
+  - name: "Journal of Applied Sport Management"
+    role: "编委"
+    period: "2024年至今"
+  - name: "Sports Innovation Journal"
+    role: "编委"
+    period: "2026年至今"
+
+reviewing:
+  - name: "Journal of Applied Sport Management"
+    detail: "审稿 8 篇，2022–2026年"
+  - name: "Sport Marketing Quarterly"
+    detail: "审稿 5 篇，2025–2026年"
+  - name: "International Journal of Sport Communication"
+    detail: "审稿 3 篇，2025–2026年"
+  - name: "Sport, Business and Management: An International Journal"
+    detail: "审稿 4 篇，2026年"
+  - name: "Hawaii International Conference on System Sciences"
+    detail: "HICSS-60，2026年"
+  - name: "Sport Entertainment & Venues Tomorrow"
+    detail: "审阅摘要 9 篇，2021–2023年"
+
+university_service:
+  - name: "学术申诉委员会"
+    institution: "南卫理公会大学"
+    period: "2026年秋季至今"
+    note: "由教务长任命，任期两年。"
+  - name: "研究生招生委员会"
+    institution: "南卫理公会大学"
+    period: "2026年秋季至今"
+  - name: "体育管理专业教师招聘委员会（3个）"
+    institution: "南卫理公会大学"
+    period: "2026年春季"
+    note: "不限职级的临床教授招聘，共聘用三位教师。"
+  - name: "Kate C. Remley 纪念奖学金评审委员会"
+    institution: "印第安纳大学伯明顿分校"
+    period: "2025年"
+  - name: "John R. Endwright 奖学金评审委员会"
+    institution: "印第安纳大学伯明顿分校"
+    period: "2025年"
+
+affiliations:
+  - name: "Sport Marketing Association（体育营销协会）"
+    period: "2024年至今"
+  - name: "Positive Sport Organizational Behavior (PSOB) Laboratory"
+    period: "2023年至今"
+  - name: "European Association for Sport Management（欧洲体育管理协会）"
+    period: "2021年至今"
+  - name: "North American Society for Sport Management（北美体育管理学会）"
+    period: "2021年至今"
+  - name: "Applied Sport Management Association（应用体育管理协会）"
+    period: "2020年至今"
+
+experience:
+  - role: "研究助理"
+    org: "贝勒大学，得克萨斯州韦科"
+    period: "2019–2020年"
+  - role: "青少年体育经理"
+    org: "Boys and Girls Club，得克萨斯州韦科"
+    period: "2018–2019年"
+  - role: "项目经理"
+    org: "Sinovest LLC，北卡罗来纳州罗利"
+    period: "2017–2018年"
+  - role: "金融分析师"
+    org: "Sinovest LLC，北卡罗来纳州罗利"
+    period: "2016–2017年"

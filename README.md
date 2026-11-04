@@ -17,6 +17,8 @@ Most updates only touch one file in `_data/`. You can edit these directly on git
 | Bio, research summary, links, email | `_data/profile.yml` |
 | The downloadable CV | Replace `files/Jiayao_Qi_CV.pdf` (keep the same file name) |
 
+The site is bilingual. English pages live at `/`, Chinese pages at `/zh/`, and the button in the bottom right corner switches between them. When you change English text in `_data/profile.yml`, `_data/cv.yml`, or `_data/teaching.yml`, make the same change in `profile_zh.yml`, `cv_zh.yml`, or `teaching_zh.yml`. Publications and talks are shared by both languages and stay in English. Buttons and headings for both languages are in `_data/i18n.yml`.
+
 Each data file has comments at the top explaining its fields. Copy an existing entry and edit it.
 
 ## What is deliberately not on the site
@@ -34,7 +36,8 @@ assets/css/site.css Design tokens and styles
 assets/js/site.js   Menu, scroll reveals, tagline, signal trace, publication filter
 assets/img/         Portrait crops, social image, icons
 files/              Public CV PDF
-index.html, research.html, publications.html, talks.html, teaching.html, cv.html, 404.html
+index.html, research.html, ...   English pages (front matter only; bodies are in _includes/pages/)
+zh/                 Chinese pages (front matter only)
 ```
 
 ## Preview locally (optional)

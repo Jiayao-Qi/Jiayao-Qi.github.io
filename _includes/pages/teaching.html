@@ -1,0 +1,59 @@
+{%- include lang.html -%}
+<section class="block" aria-labelledby="ior-h">
+  <h2 id="ior-h" class="heading-5">{{ t.teaching_page.ior }}</h2>
+  <div class="rows">
+    {%- for inst in teach.instructor %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-2">{{ inst.institution }}</h3>
+        <ul class="course-list body-6">
+          {%- for c in inst.courses %}
+          <li><span class="course-code">{{ c.code }}</span><span class="course-name"><span lang="en">{{ c.name }}</span>{% if c.level %}<span class="badge">{{ c.level }}</span>{% endif %}{% if c.period %}<span class="muted caption-5">{{ c.period }}</span>{% endif %}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <p class="row-side caption-4">{{ inst.period }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" aria-labelledby="ta-h">
+  <h2 id="ta-h" class="heading-5">{{ t.teaching_page.support }}</h2>
+  <div class="rows">
+    {%- for a in teach.assistant %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ a.role }}</h3>
+        <p class="body-6 muted">{% if a.course %}<span lang="en">{{ a.course }}</span>{% if lang == "zh" %}，{% else %}, {% endif %}{% endif %}{{ a.institution }}</p>
+      </div>
+      <p class="row-side caption-4">{{ a.period }}</p>
+    </div>
+    {%- endfor %}
+    {%- for a in teach.advising %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ a.role }}</h3>
+        <p class="body-6 muted">{{ a.detail }}{% if lang == "zh" %}，{% else %}, {% endif %}{{ a.institution }}</p>
+      </div>
+      <p class="row-side caption-4">{{ a.term }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block" aria-labelledby="guest-h">
+  <h2 id="guest-h" class="heading-5">{{ t.teaching_page.guest }}</h2>
+  <p class="body-6 muted guest-place">{{ t.teaching_page.guest_place }}</p>
+  <div class="rows">
+    {%- for g in teach.guest %}
+    <div class="row">
+      <div class="row-main">
+        <h3 class="title-3">{{ g.topic }}</h3>
+        <p class="body-6 muted" lang="en">{{ g.course }}</p>
+      </div>
+      <p class="row-side caption-4">{{ g.term }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

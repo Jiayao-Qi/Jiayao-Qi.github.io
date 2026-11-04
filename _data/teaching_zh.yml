@@ -1,0 +1,72 @@
+# 中文版教学数据。与 teaching.yml 一一对应；课程代码和课程名称保留英文原名。
+
+instructor:
+  - institution: "南卫理公会大学"
+    period: "2026年春季至今"
+    courses:
+      - code: "APSM 4371"
+        name: "Revenue in Sports"
+      - code: "APSM 4315"
+        name: "Senior Project"
+      - code: "APSM 4345"
+        name: "Sport Marketing"
+      - code: "APSM 4375"
+        name: "Sports Data and Analytics"
+
+  - institution: "印第安纳大学伯明顿分校"
+    period: "2024年秋季至2025年"
+    courses:
+      - code: "SPH-M 304"
+        name: "Human Resource and Career Outlook in Sport"
+      - code: "SPH-M 423"
+        name: "Financial Principles in Sport"
+      - code: "SPH-M 425"
+        name: "Sport Governance in Global Communication"
+      - code: "SPH-M 518"
+        name: "Governance in Sport Management"
+        level: "研究生"
+      - code: "SPH-M 615"
+        name: "Financial Analysis in Sport"
+        level: "研究生"
+      - code: "SPH-M 520"
+        name: "Research Method in Sport Management"
+        level: "研究生"
+      - code: "SPH-K 693"
+        name: "Independent Study & Research"
+        level: "研究生"
+
+  - institution: "南卡罗来纳大学"
+    period: "2021年秋季至2024年春季"
+    courses:
+      - code: "SPTE 490"
+        name: "Sport Governance"
+        period: "2021年秋季至2023年春季"
+      - code: "SPTE 440"
+        name: "Sport & Entertainment Business and Finance"
+        period: "2022年秋季至2024年春季"
+
+assistant:
+  - institution: "南卡罗来纳大学"
+    role: "助教"
+    course: "SPTE 110: Sport and Entertainment in American Life"
+    period: "2020年秋季至2021年春季"
+  - institution: "贝勒大学"
+    role: "学业导师与辅导"
+    period: "2018年秋季至2020年春季"
+
+guest:
+  - course: "SPTE 580: Business Principles in Sport Management"
+    term: "2021年春季"
+    topic: "体育组织的结构、决策金字塔与决策程序"
+  - course: "SPTE 580: Business Principles in Sport Management"
+    term: "2021年秋季"
+    topic: "体育管理中的财务决策"
+  - course: "SPTE 440: Sport & Entertainment Business and Finance"
+    term: "2021年秋季"
+    topic: "资本资产定价模型（CAPM）入门"
+
+advising:
+  - role: "指导教师"
+    detail: "Sport Entertainment & Venues Tomorrow 会议本科生案例分析竞赛（南卡罗来纳州哥伦比亚）"
+    institution: "印第安纳大学伯明顿分校"
+    term: "2024年秋季"

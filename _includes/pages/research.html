@@ -1,0 +1,51 @@
+{%- include lang.html -%}
+{%- assign all_pubs = site.data.publications.journal | concat: site.data.publications.proceedings | concat: site.data.publications.chapters -%}
+
+<section class="block" aria-labelledby="areas-h">
+  <h2 id="areas-h" class="heading-5">{{ t.research_page.two_lines }}</h2>
+  <div class="prose">
+    <p class="body-3">{{ p.theory }}</p>
+  </div>
+  {%- for a in p.research_areas %}
+  {%- assign related = all_pubs | where: "area", a.key -%}
+  <div class="block">
+    <div class="prose">
+      <p class="eyebrow">{{ a.name }}</p>
+      <h3 class="heading-6">{{ a.heading }}</h3>
+      {%- for para in a.detail %}
+      <p class="body-3">{{ para }}</p>
+      {%- endfor %}
+    </div>
+    <ul class="work-list related-work">
+      {%- for pub in related limit: 4 %}
+      {% include pub-item.html pub=pub %}
+      {%- endfor %}
+    </ul>
+    {%- if related.size > 4 %}
+    <p class="see-all"><a class="more" href="{{ prefix | append: '/publications/' | relative_url }}">{{ t.research_page.see_all_a }} {{ related.size }} {{ t.research_page.see_all_b }}{% include icons/arrow-up-right.svg %}</a></p>
+    {%- endif %}
+  </div>
+  {%- endfor %}
+</section>
+
+<section class="block" aria-labelledby="bridge-h">
+  <h2 id="bridge-h" class="heading-5">{{ p.bridge.heading }}</h2>
+  <div class="prose">
+    <p class="body-3">{{ p.bridge.text }}</p>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="methods-h">
+  <h2 id="methods-h" class="heading-5">{{ t.methods }}</h2>
+  <div class="prose">
+    <p class="body-3">{{ p.methods_intro }}</p>
+  </div>
+  <dl class="methods">
+    {%- for m in p.methods %}
+    <div>
+      <dt class="title-3">{{ m.name }}</dt>
+      <dd class="body-6">{{ m.detail }}</dd>
+    </div>
+    {%- endfor %}
+  </dl>
+</section>

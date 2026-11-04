@@ -1,0 +1,15 @@
+{%- include lang.html -%}
+{%- assign by_year = site.data.talks | group_by_exp: "item", "item.date | date: '%Y'" -%}
+{%- for y in by_year %}
+<section class="group" aria-labelledby="y{{ y.name }}">
+  <div class="group-head">
+    <h2 id="y{{ y.name }}" class="heading-6 tnum">{{ y.name }}{% if lang == "zh" %}年{% endif %}</h2>
+    <span class="count caption-4">{{ y.items.size }}</span>
+  </div>
+  <ul class="work-list">
+    {%- for talk in y.items %}
+    {% include talk-item.html talk=talk %}
+    {%- endfor %}
+  </ul>
+</section>
+{%- endfor %}

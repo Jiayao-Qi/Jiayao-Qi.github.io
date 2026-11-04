@@ -535,3 +535,48 @@ body.menu-open { overflow: hidden; }
   .js .reveal.pre { opacity: 1; transform: none; }
   .tagline .w { opacity: 1; }
 }
+
+/* Language switch: a small pill fixed to the bottom right corner */
+.lang-toggle {
+  position: fixed; z-index: 45;
+  right: max(var(--s-200), env(safe-area-inset-right, 0px));
+  bottom: calc(env(safe-area-inset-bottom, 0px) + var(--s-200));
+  display: inline-flex; align-items: center; gap: var(--s-50);
+  padding: var(--s-75) var(--s-100);
+  border-radius: var(--r-full);
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: saturate(1.4) blur(16px);
+  backdrop-filter: saturate(1.4) blur(16px);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  color: var(--fg); text-decoration: none;
+  font-size: 14px; line-height: 20px; font-weight: 600;
+  transition: background-color var(--t-color) var(--ease), color var(--t-color) var(--ease), border-color var(--t-color) var(--ease), transform var(--t-color) var(--ease);
+}
+.lang-toggle:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.lang-toggle:active { transform: scale(0.98); }
+.lang-toggle .icon { width: 16px; height: 16px; }
+body.menu-open .lang-toggle { display: none; }
+
+/* Small helpers that replaced inline styles */
+.fg { color: var(--fg); }
+.guest-place { margin-bottom: var(--s-200); }
+.cv-first { margin-top: var(--s-600); }
+.sub-head { margin-bottom: var(--s-200); }
+.rows + .sub-head { margin-top: var(--s-500); }
+
+/* Chinese pages: CJK glyphs need open tracking and more line height than the Latin scale gives */
+html[lang="zh-CN"] .hero-name,
+html[lang="zh-CN"] .page-title,
+html[lang="zh-CN"] [class*="heading-"],
+html[lang="zh-CN"] .tagline p { letter-spacing: 0.02em; }
+html[lang="zh-CN"] .tagline p { line-height: 1.4; }
+html[lang="zh-CN"] .page-title,
+html[lang="zh-CN"] .heading-5,
+html[lang="zh-CN"] .heading-6 { line-height: 1.4; }
+html[lang="zh-CN"] .body-3 { line-height: 28px; }
+html[lang="zh-CN"] .body-6 { line-height: 24px; }
+html[lang="zh-CN"] .eyebrow { letter-spacing: 0.12em; }
+.hero-zh:lang(en) { letter-spacing: 0; }
+html[lang="zh-CN"] .tagline p { text-wrap: balance; }
+@media (max-width: 767px) { .site-footer { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + var(--s-900)); } }

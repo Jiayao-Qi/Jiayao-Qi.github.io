@@ -1,0 +1,25 @@
+{%- comment -%}
+Sets the language variables every template uses:
+lang (en or zh), t (interface text), p (profile), cvd (CV data), teach (teaching data),
+prefix ("" or "/zh"), and other_url (the same page in the other language).
+{%- endcomment -%}
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- if lang == "zh" -%}
+  {%- assign p = site.data.profile_zh -%}
+  {%- assign cvd = site.data.cv_zh -%}
+  {%- assign teach = site.data.teaching_zh -%}
+  {%- assign prefix = "/zh" -%}
+  {%- assign other_url = page.url | remove_first: "/zh" -%}
+  {%- if other_url == "" -%}{%- assign other_url = "/" -%}{%- endif -%}
+{%- else -%}
+  {%- assign p = site.data.profile -%}
+  {%- assign cvd = site.data.cv -%}
+  {%- assign teach = site.data.teaching -%}
+  {%- assign prefix = "" -%}
+  {%- if page.url == "/404.html" -%}
+    {%- assign other_url = "/zh/" -%}
+  {%- else -%}
+    {%- assign other_url = "/zh" | append: page.url -%}
+  {%- endif -%}
+{%- endif -%}

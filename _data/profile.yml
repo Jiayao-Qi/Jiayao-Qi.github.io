@@ -2,6 +2,11 @@
 name: "Jiayao (Chee) Qi"
 name_zh: "戚佳耀"
 short_name: "Chee Qi"
+# How the name shows in this language, and the secondary name shown beneath it.
+display_name: "Jiayao (Chee) Qi"
+alt_name: "戚佳耀"
+alt_lang: "zh-CN"
+short_institution: "SMU"
 title: "Researcher in Sport Management"
 institution: "Southern Methodist University"
 location: "Dallas, Texas"

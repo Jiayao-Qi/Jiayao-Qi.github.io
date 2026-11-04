@@ -1,0 +1,110 @@
+{%- include lang.html -%}
+<section class="stage" aria-labelledby="hero-name">
+  <div class="stage-content wrap">
+    <div class="stage-text">
+      <p class="stage-pill caption-3">{{ t.pill_field }} &middot; <span class="long">{{ p.institution }}</span><span class="short">{{ p.short_institution }}</span></p>
+      <h1 id="hero-name">
+        <span class="hero-name">{{ p.display_name }}</span>
+        <span class="hero-zh" lang="{{ p.alt_lang }}">{{ p.alt_name }}</span>
+      </h1>
+      <div class="hero-role">
+        <p class="title-1">{{ p.title }}</p>
+        <p class="hero-summary body-3">{{ p.summary }}</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary button-md" href="{{ prefix | append: '/cv/' | relative_url }}">{{ t.view_cv }}{% include icons/arrow-up-right.svg %}</a>
+        <a class="btn btn-ghost button-md" href="{{ prefix | append: '/research/' | relative_url }}">{{ t.my_research }}</a>
+      </div>
+    </div>
+    <figure class="stage-portrait">
+      <picture>
+        <source srcset="{{ '/assets/img/headshot.webp' | relative_url }}" type="image/webp">
+        <img src="{{ '/assets/img/headshot.jpg' | relative_url }}" width="880" height="1100" alt="{{ t.portrait_alt }}" fetchpriority="high">
+      </picture>
+    </figure>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="about-h">
+  <div class="wrap about">
+    <h2 id="about-h" class="heading-5">{{ t.about }}</h2>
+    <div class="about-text">
+      <p class="body-3">{{ p.about }}</p>
+      <dl class="stats">
+        <div><dt class="caption-4">{{ t.stats_articles }}</dt><dd class="heading-4 tnum">{{ site.data.publications.journal.size }}</dd></div>
+        <div><dt class="caption-4">{{ t.stats_talks }}</dt><dd class="heading-4 tnum">{{ site.data.talks.size }}</dd></div>
+        <div><dt class="caption-4">{{ t.stats_grants }}</dt><dd class="heading-4 tnum">{{ cvd.grants.size }}</dd></div>
+      </dl>
+      {%- if lang == "zh" %}
+      <p class="hero-proof caption-5">{{ t.proof_lead }} <strong lang="en">Journal of Sport Management</strong>、<strong lang="en">International Journal of Sports Marketing and Sponsorship</strong> {{ t.proof_and }} <strong lang="en">International Journal of Sport Communication</strong>。</p>
+      {%- else %}
+      <p class="hero-proof caption-5">{{ t.proof_lead }} <strong>Journal of Sport Management</strong>, <strong>International Journal of Sports Marketing and Sponsorship</strong>, {{ t.proof_and }} <strong>International Journal of Sport Communication</strong>.</p>
+      {%- endif %}
+      {% include contact-links.html %}
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="research-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="research-h" class="heading-5">{{ t.research }}</h2>
+      <a class="more" href="{{ prefix | append: '/research/' | relative_url }}">{{ t.about_research }}{% include icons/arrow-up-right.svg %}</a>
+    </div>
+    <p class="research-lead body-3">{{ p.research_lead }}</p>
+    <div class="areas">
+      {%- for a in p.research_areas %}
+      <article class="area">
+        <p class="eyebrow">{{ a.name }}</p>
+        <h3 class="heading-6">{{ a.heading }}</h3>
+        <p class="body-3">{{ a.summary }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+    <h3 class="methods-label title-4">{{ t.methods }}</h3>
+    <dl class="methods">
+      {%- assign home_methods = p.methods | where: "home", true -%}
+      {%- for m in home_methods %}
+      <div>
+        <dt class="title-3">{{ m.name }}</dt>
+        <dd class="body-6">{{ m.detail }}</dd>
+      </div>
+      {%- endfor %}
+    </dl>
+  </div>
+</section>
+
+<section class="tagline" aria-label="{{ t.tagline_aria }}">
+  <div class="wrap">
+    <p data-tagline>{{ p.tagline }}</p>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="pubs-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="pubs-h" class="heading-5">{{ t.recent_pubs }}</h2>
+      <a class="more" href="{{ prefix | append: '/publications/' | relative_url }}">{{ t.all_pubs }}{% include icons/arrow-up-right.svg %}</a>
+    </div>
+    <ul class="work-list">
+      {%- assign featured = site.data.publications.journal | where: "featured", true -%}
+      {%- for pub in featured %}
+      {% include pub-item.html pub=pub %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section reveal" aria-labelledby="talks-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="talks-h" class="heading-5">{{ t.talks }}</h2>
+      <a class="more" href="{{ prefix | append: '/talks/' | relative_url }}">{{ t.all_talks }}{% include icons/arrow-up-right.svg %}</a>
+    </div>
+    <ul class="work-list">
+      {%- for talk in site.data.talks limit: 3 %}
+      {% include talk-item.html talk=talk %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,7 +1,7 @@
-{%- assign p = site.data.profile -%}
+{%- include lang.html -%}
 <ul class="icon-links">
-  <li><a class="icon-link" href="mailto:{{ p.email }}">{% include icons/envelope-simple.svg %}<span>Email</span></a></li>
+  <li><a class="icon-link" href="mailto:{{ p.email }}">{% include icons/envelope-simple.svg %}<span>{{ t.email }}</span></a></li>
   {%- for l in p.links %}
-  <li><a class="icon-link" href="{{ l.url }}" rel="me noopener" target="_blank">{% include icons/{{ l.icon }}.svg %}<span>{{ l.label }}</span><span class="sr-only"> (opens in a new tab)</span></a></li>
+  <li><a class="icon-link" href="{{ l.url }}" rel="me noopener" target="_blank">{% include icons/{{ l.icon }}.svg %}<span>{{ l.label }}</span><span class="sr-only"> {{ t.new_tab }}</span></a></li>
   {%- endfor %}
 </ul>

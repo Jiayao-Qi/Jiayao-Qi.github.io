@@ -1,28 +1,41 @@
-{%- assign p = site.data.profile -%}
-{%- if page.url == "/" -%}
-  {%- assign full_title = p.name | append: " | " | append: p.title -%}
+{%- include lang.html -%}
+{%- assign home_url = prefix | append: "/" -%}
+{%- if page.url == home_url -%}
+  {%- assign full_title = p.display_name | append: " | " | append: p.title -%}
 {%- else -%}
-  {%- assign full_title = page.title | append: " | " | append: p.name -%}
+  {%- assign full_title = page.title | append: " | " | append: p.display_name -%}
 {%- endif -%}
-{%- assign desc = page.description | default: site.description -%}
+{%- assign desc = page.description | default: t.site_description -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{ full_title }}</title>
 <meta name="description" content="{{ desc | escape }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+{%- unless page.url == "/404.html" %}
+{%- if lang == "zh" %}
+<link rel="alternate" hreflang="en" href="{{ other_url | absolute_url }}">
+<link rel="alternate" hreflang="zh-CN" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ other_url | absolute_url }}">
+{%- else %}
+<link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="zh-CN" href="{{ other_url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
+{%- endif %}
+{%- endunless %}
 <meta name="author" content="{{ p.name }}">
 <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#131209" media="(prefers-color-scheme: dark)">
 
-<meta property="og:type" content="{% if page.url == '/' %}profile{% else %}website{% endif %}">
-<meta property="og:site_name" content="{{ p.name }}">
+<meta property="og:type" content="{% if page.url == home_url %}profile{% else %}website{% endif %}">
+<meta property="og:locale" content="{{ t.og_locale }}">
+<meta property="og:site_name" content="{{ p.display_name }}">
 <meta property="og:title" content="{{ full_title | escape }}">
 <meta property="og:description" content="{{ desc | escape }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:image" content="{{ '/assets/img/og-image.jpg' | absolute_url }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Portrait of {{ p.name }} beside the name and title {{ p.title }}, {{ p.institution }}">
+<meta property="og:image:alt" content="{{ t.avatar_alt }}">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
@@ -31,7 +44,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap">
+{%- if lang == "zh" %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&display=swap">
+{%- else %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&text=%E6%88%9A%E4%BD%B3%E8%80%80&display=swap">
+{%- endif %}
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 <script>document.documentElement.classList.add("js");</script>
 <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
