@@ -113,7 +113,7 @@ methods:
     detail: "Social experiments paired with multilevel modeling, such as hierarchical linear modeling (HLM), and Bayesian analysis"
     home: true
   - name: "Qualitative methods"
-    detail: "A new way to collect voice data: people record spoken answers online, on their own time, so qualitative studies can reach survey-sized samples"
+    detail: "Asynchronous audio data collection, with participants recording spoken responses online on their own time"
     home: true
   - name: "Data acquisition"
     detail: "Web scraping and APIs in Python and R"
