@@ -33,7 +33,7 @@ _data/              All content (edit these)
 _layouts/           Page frames: default (home, 404) and page (with profile sidebar)
 _includes/          Shared pieces: head, nav, footer, publication and talk rows, icons
 assets/css/site.css Design tokens and styles
-assets/js/site.js   Menu, scroll reveals, tagline, signal trace, publication filter
+assets/js/site.js   Menu, scroll reveals, tagline reveal, publication filter
 assets/img/         Portrait crops, social image, icons
 files/              Public CV PDF
 index.html, research.html, ...   English pages (front matter only; bodies are in _includes/pages/)
