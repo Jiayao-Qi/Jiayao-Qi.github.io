@@ -49,6 +49,10 @@ jekyll serve
 
 Then open http://localhost:4000.
 
+## Visit counts
+
+The live site loads [GoatCounter](https://www.goatcounter.com) (no cookies, no personal data, nothing visible on the page). The dashboard is private at https://qijy33.goatcounter.com. The script is added only in production builds (`_includes/head.html`), so local previews are not counted.
+
 ## Credits
 
 - Visual rules adapted from the [landing-page-design skill](https://github.com/elayadesign/ai-design-skills) by Elaya, MIT License.

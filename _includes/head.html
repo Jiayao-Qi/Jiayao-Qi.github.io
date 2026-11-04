@@ -52,6 +52,9 @@
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 <script>document.documentElement.classList.add("js");</script>
 <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+{%- if jekyll.environment == "production" %}
+<script data-goatcounter="https://qijy33.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{%- endif %}
 {%- if page.url == "/" %}
 <script type="application/ld+json">
 {
