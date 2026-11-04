@@ -28,11 +28,11 @@ summary: >-
 
 # The About paragraph on the home page.
 about: >-
-  Sport is an emotional business. People pursue jobs in it out of love for the game,
-  and fans attach to teams as an extension of who they are. These two are usually
-  studied separately, in organizational behavior and in sport marketing, but social
-  identity theory explains much of what they share, and my work sits on both sides of
-  that foundation.
+  Sport runs on emotion. Many people choose to work in sport because they love the game,
+  and many fans feel their team is part of who they are. Researchers usually study these
+  two groups separately, but they share one idea, which psychologists call social
+  identity: part of who we are comes from the groups we belong to. My research looks at
+  both, the people who work in sport and the fans who follow it.
 
 # The large statement that lights up word by word on the home page.
 tagline: "Emotion and identity move people through sport, whether they buy a ticket or take the job. My research explains how."
@@ -99,7 +99,9 @@ theory: >-
 methods_intro: >-
   Because emotion is difficult to self-report, I measure it directly in the lab and pair
   that with computational analysis of large text corpora, at a scale interviews cannot
-  reach. Conventional quantitative and qualitative methods round out the toolkit.
+  reach. I also run social experiments analyzed with multilevel and Bayesian models, and
+  I collect recorded voice answers online so that qualitative studies can reach larger
+  samples.
 methods:
   - name: "Biometrics"
     detail: "Galvanic skin response, EEG, eye tracking, and facial expression analysis in iMotions"
@@ -108,10 +110,10 @@ methods:
     detail: "Natural language processing, topic modeling, machine learning, and large language models in Python"
     home: true
   - name: "Quantitative methods"
-    detail: "Surveys and experiments, with multilevel modeling in R, SPSS, and HLM 8.0"
+    detail: "Social experiments paired with multilevel modeling, such as hierarchical linear modeling (HLM), and Bayesian analysis"
     home: true
   - name: "Qualitative methods"
-    detail: "Qualitative analysis of open-ended and spoken responses in NVivo"
+    detail: "A new way to collect voice data: people record spoken answers online, on their own time, so qualitative studies can reach survey-sized samples"
     home: true
   - name: "Data acquisition"
     detail: "Web scraping and APIs in Python and R"
