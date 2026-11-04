@@ -2,7 +2,7 @@
 name: "Jiayao (Chee) Qi"
 name_zh: "戚佳耀"
 short_name: "Chee Qi"
-title: "Clinical Assistant Professor of Sport Management"
+title: "Researcher in Sport Management"
 institution: "Southern Methodist University"
 location: "Dallas, Texas"
 email: "jcqi@smu.edu"
@@ -16,42 +16,100 @@ links:
     url: "https://orcid.org/0000-0003-3376-9812"
     icon: "orcid"
 
-# One or two sentences under your name on the home page.
+# The one sentence under your name on the home page.
 summary: >-
-  I study how passion for sport shapes careers, emotions, and fandom.
-  My work pairs biometrics with large scale analysis of fan and media discourse.
+  I study how emotion and identity shape behavior in sport, from the fandom that ties
+  people to their teams to the passion that draws them into sport careers.
 
-# The About paragraph beside your portrait on the home page.
+# The About paragraph on the home page.
 about: >-
-  I am a Clinical Assistant Professor of Sport Management at Southern Methodist University.
-  I earned my Ph.D. in Sport and Entertainment Management at the University of South Carolina
-  and taught at Indiana University Bloomington before joining SMU. My research connects
-  organizational behavior and sport marketing, with methods that range from biometrics to
-  large language models.
+  Sport is an emotional business. People pursue jobs in it out of love for the game,
+  and fans attach to teams as an extension of who they are. These two are usually
+  studied separately, in organizational behavior and in sport marketing, but social
+  identity theory explains much of what they share, and my work sits on both sides of
+  that foundation.
 
 # The large statement that lights up word by word on the home page.
-tagline: "Many sport professionals begin as fans. My research follows that passion from the stands into the workplace."
+tagline: "Emotion and identity move people through sport, whether they buy a ticket or take the job. My research explains how."
+
+# The sentence above the two research cards on the home page.
+research_lead: >-
+  Social identity theory ties my two lines of research together. The same lens explains
+  a job seeker drawn to an organization, an employee whose sense of self blurs into the
+  team, and a fan who defends a brand online.
 
 research_areas:
   - name: "Organizational behavior"
+    key: careers
+    heading: "Emotion and identity in the sport workforce"
     summary: >-
-      How passion shapes career attraction, emotions, well-being, and turnover
-      among sport job seekers and employees.
+      How passion and identity shape career attraction, emotions, well-being, and
+      turnover among sport job seekers and employees.
+    detail:
+      - >-
+        Passion draws people into sport careers and then governs how they fare once they
+        arrive. Passion research has grown quickly over the past two decades, yet only a
+        handful of studies have appeared in sport management outlets, which leaves an
+        industry built on passion with little evidence.
+      - >-
+        I study where passion forms, how it shapes the way job seekers appraise potential
+        employers, and how passion and identity relate to emotions and well-being once
+        people are on the job. In a biometric study in the Journal of Sport Management,
+        job seekers' physiological arousal dropped when their ideal employer changed even
+        slightly, while their spoken responses expressed indifference.
   - name: "Sport marketing"
+    key: fandom
+    heading: "Fan identity in digital communities"
     summary: >-
-      Fandom and team identification, particularly in digital fan communities,
-      and how fans respond to AI commentators, chatbots, and personalized marketing.
+      How fans build identity and meaning together in digital communities, and how they
+      respond to AI commentators, chatbots, and personalized marketing.
+    detail:
+      - >-
+        Fans build identity and meaning together, and digital platforms make that process
+        observable at scale. I profile digital fandom across national contexts and show
+        how global brands are localized in fan discourse, compare fan conversations around
+        men's and women's March Madness, and examine how fans co-create Grand Slam brand
+        meaning.
+      - >-
+        Artificial intelligence is a growing focus. A funded project examines the
+        personalization-privacy paradox in AI-driven sport marketing, and experiments test
+        how fans respond to AI commentators and chatbots.
 
+# Where the two lines meet (research page).
+bridge:
+  heading: "When the fan and the employee are the same person"
+  text: >-
+    Most people who work in sport started as fans. A developing line of my work asks how
+    team identification carries from the stands into career decisions and employment
+    outcomes, building on the same social identity mechanism that runs through both
+    literatures.
+
+# Theory note (research page).
+theory: >-
+  Social identity theory is the shared foundation of this work. I also coauthored the
+  broaden-and-build chapter in Theory in Sport Management: Insights and Applications
+  (Routledge, in press), which grounds its positive emotion side.
+
+# Methods. "home: true" items appear on the home page (keep it to four).
+methods_intro: >-
+  Because emotion is difficult to self-report, I measure it directly in the lab and pair
+  that with computational analysis of large text corpora, at a scale interviews cannot
+  reach. Conventional quantitative and qualitative methods round out the toolkit.
 methods:
   - name: "Biometrics"
     detail: "Galvanic skin response, EEG, eye tracking, and facial expression analysis in iMotions"
+    home: true
   - name: "Data science and AI"
     detail: "Natural language processing, topic modeling, machine learning, and large language models in Python"
+    home: true
+  - name: "Quantitative methods"
+    detail: "Surveys and experiments, with multilevel modeling in R, SPSS, and HLM 8.0"
+    home: true
+  - name: "Qualitative methods"
+    detail: "Qualitative analysis of open-ended and spoken responses in NVivo"
+    home: true
   - name: "Data acquisition"
     detail: "Web scraping and APIs in Python and R"
-  - name: "Statistics"
-    detail: "Multilevel modeling in R, SPSS, and HLM 8.0"
-  - name: "Qualitative analysis"
-    detail: "Content analysis and coding in NVivo"
+  - name: "Languages"
+    detail: "Chinese (native) and English (proficient)"
 
-languages: "Chinese (native) and English (proficient)"

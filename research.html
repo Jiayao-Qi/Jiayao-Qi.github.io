@@ -3,38 +3,50 @@ layout: page
 title: Research
 eyebrow: Research
 permalink: /research/
-description: "Jiayao (Chee) Qi studies passion, careers, emotions, and fandom in sport, using biometrics, natural language processing, and large language models."
-lede: "My research addresses two areas of sport management and the bridge between them. Many sport professionals begin as fans, so I trace how team identification carries over into career decisions."
+description: "Jiayao (Chee) Qi studies how emotion and identity shape behavior in sport, among the people who build careers in the industry and the fans who consume it, using biometrics, computational text analysis, and conventional quantitative and qualitative methods."
+lede: "My research asks how emotion and identity shape behavior in sport, both for the people who build careers in the industry and for the fans who consume it. Sport is an emotional business on both counts: people pursue jobs in it out of love for the game, and fans attach to teams as an extension of who they are."
 ---
 {%- assign p = site.data.profile -%}
 {%- assign all_pubs = site.data.publications.journal | concat: site.data.publications.proceedings | concat: site.data.publications.chapters -%}
 
 <section class="block" aria-labelledby="areas-h">
-  <h2 id="areas-h" class="heading-5">Two areas</h2>
+  <h2 id="areas-h" class="heading-5">Two lines of research</h2>
+  <div class="prose">
+    <p class="body-3">{{ p.theory }}</p>
+  </div>
   {%- for a in p.research_areas %}
-  {%- if forloop.index == 1 %}{% assign key = "careers" %}{% else %}{% assign key = "fandom" %}{% endif %}
-  {%- assign related = all_pubs | where: "area", key -%}
+  {%- assign related = all_pubs | where: "area", a.key -%}
   <div class="block">
     <div class="prose">
-      <h3 class="heading-6">{{ a.name }}</h3>
-      <p class="body-3">{{ a.summary }}</p>
+      <p class="eyebrow">{{ a.name }}</p>
+      <h3 class="heading-6">{{ a.heading }}</h3>
+      {%- for para in a.detail %}
+      <p class="body-3">{{ para }}</p>
+      {%- endfor %}
     </div>
-    <ul class="work-list" style="margin-top: var(--s-300)">
+    <ul class="work-list related-work">
       {%- for pub in related limit: 4 %}
       {% include pub-item.html pub=pub %}
       {%- endfor %}
     </ul>
     {%- if related.size > 4 %}
-    <p style="margin-top: var(--s-200)"><a class="more" href="{{ '/publications/' | relative_url }}">See all {{ related.size }} in Publications{% include icons/arrow-up-right.svg %}</a></p>
+    <p class="see-all"><a class="more" href="{{ '/publications/' | relative_url }}">See all {{ related.size }} in Publications{% include icons/arrow-up-right.svg %}</a></p>
     {%- endif %}
   </div>
   {%- endfor %}
 </section>
 
+<section class="block" aria-labelledby="bridge-h">
+  <h2 id="bridge-h" class="heading-5">{{ p.bridge.heading }}</h2>
+  <div class="prose">
+    <p class="body-3">{{ p.bridge.text }}</p>
+  </div>
+</section>
+
 <section class="block" aria-labelledby="methods-h">
   <h2 id="methods-h" class="heading-5">Methods</h2>
   <div class="prose">
-    <p class="body-3">My distinctive contribution is methodological. I capture emotional responses with biometrics and mine big data from fan and media discourse.</p>
+    <p class="body-3">{{ p.methods_intro }}</p>
   </div>
   <dl class="methods">
     {%- for m in p.methods %}
@@ -43,17 +55,5 @@ lede: "My research addresses two areas of sport management and the bridge betwee
       <dd class="body-6">{{ m.detail }}</dd>
     </div>
     {%- endfor %}
-    <div>
-      <dt class="title-3">Languages</dt>
-      <dd class="body-6">{{ p.languages }}</dd>
-    </div>
   </dl>
-</section>
-
-<section class="block" aria-labelledby="now-h">
-  <h2 id="now-h" class="heading-5">Current direction</h2>
-  <div class="prose">
-    <p class="body-3">I now extend these methods to artificial intelligence. I use large language models as analytic tools, and I test how fans respond to AI commentators, chatbots, and AI personalized marketing.</p>
-    <p class="body-3">A current SMU Faculty Research Grant supports this work: <span style="color: var(--fg)">The personalization-privacy paradox: Fan acceptance of AI-driven marketing in sport</span>.</p>
-  </div>
 </section>

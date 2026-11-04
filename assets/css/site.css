@@ -388,7 +388,13 @@ body.menu-open { overflow: hidden; }
   border-radius: var(--r-2xl);
 }
 .area p { color: var(--muted); }
-.bridge { margin-top: var(--s-300); max-width: 680px; color: var(--muted); }
+.research-lead { max-width: 680px; color: var(--muted); margin-bottom: var(--s-400); }
+.area .eyebrow { margin-bottom: var(--s-50); }
+.methods-label { margin-top: var(--s-600); color: var(--muted); }
+.methods-label + .methods { margin-top: var(--s-200); }
+.related-work { margin-top: var(--s-300); }
+.prose + .block { margin-top: var(--s-600); }
+.see-all { margin-top: var(--s-200); }
 
 .methods { display: grid; gap: var(--s-300) var(--s-500); margin-top: var(--s-600); }
 @media (min-width: 768px) { .methods { grid-template-columns: 1fr 1fr; } }

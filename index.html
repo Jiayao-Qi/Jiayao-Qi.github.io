@@ -50,16 +50,20 @@ layout: default
       <h2 id="research-h" class="heading-5">Research</h2>
       <a class="more" href="{{ '/research/' | relative_url }}">About my research{% include icons/arrow-up-right.svg %}</a>
     </div>
+    <p class="research-lead body-3">{{ p.research_lead }}</p>
     <div class="areas">
       {%- for a in p.research_areas %}
       <article class="area">
-        <h3 class="heading-6">{{ a.name }}</h3>
+        <p class="eyebrow">{{ a.name }}</p>
+        <h3 class="heading-6">{{ a.heading }}</h3>
         <p class="body-3">{{ a.summary }}</p>
       </article>
       {%- endfor %}
     </div>
+    <h3 class="methods-label title-4">Methods</h3>
     <dl class="methods">
-      {%- for m in p.methods limit: 4 %}
+      {%- assign home_methods = p.methods | where: "home", true -%}
+      {%- for m in home_methods %}
       <div>
         <dt class="title-3">{{ m.name }}</dt>
         <dd class="body-6">{{ m.detail }}</dd>
