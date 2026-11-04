@@ -30,16 +30,6 @@
     <h2 id="about-h" class="heading-5">{{ t.about }}</h2>
     <div class="about-text">
       <p class="body-3">{{ p.about }}</p>
-      <dl class="stats">
-        <div><dt class="caption-4">{{ t.stats_articles }}</dt><dd class="heading-4 tnum">{{ site.data.publications.journal.size }}</dd></div>
-        <div><dt class="caption-4">{{ t.stats_talks }}</dt><dd class="heading-4 tnum">{{ site.data.talks.size }}</dd></div>
-        <div><dt class="caption-4">{{ t.stats_grants }}</dt><dd class="heading-4 tnum">{{ cvd.grants.size }}</dd></div>
-      </dl>
-      {%- if lang == "zh" %}
-      <p class="hero-proof caption-5">{{ t.proof_lead }} <strong lang="en">Journal of Sport Management</strong>、<strong lang="en">International Journal of Sports Marketing and Sponsorship</strong> {{ t.proof_and }} <strong lang="en">International Journal of Sport Communication</strong>。</p>
-      {%- else %}
-      <p class="hero-proof caption-5">{{ t.proof_lead }} <strong>Journal of Sport Management</strong>, <strong>International Journal of Sports Marketing and Sponsorship</strong>, {{ t.proof_and }} <strong>International Journal of Sport Communication</strong>.</p>
-      {%- endif %}
       {% include contact-links.html %}
     </div>
   </div>

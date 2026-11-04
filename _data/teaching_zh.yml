@@ -40,10 +40,8 @@ instructor:
     courses:
       - code: "SPTE 490"
         name: "Sport Governance"
-        period: "2021年秋季至2023年春季"
       - code: "SPTE 440"
         name: "Sport & Entertainment Business and Finance"
-        period: "2022年秋季至2024年春季"
 
 assistant:
   - institution: "南卡罗来纳大学"
