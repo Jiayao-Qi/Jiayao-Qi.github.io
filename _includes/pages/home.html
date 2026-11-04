@@ -98,3 +98,18 @@
     </ul>
   </div>
 </section>
+
+<section class="section reveal" aria-labelledby="collab-h">
+  <div class="wrap about">
+    <h2 id="collab-h" class="heading-5">{{ t.collaboration }}</h2>
+    <div class="about-text">
+      <p class="body-3">{{ p.collaboration.lead }}</p>
+      <ul class="collab-list">
+        {%- for item in p.collaboration.areas %}
+        <li class="title-3">{{ item }}</li>
+        {%- endfor %}
+      </ul>
+      <a class="btn btn-primary button-md" href="mailto:{{ p.email }}">{% include icons/envelope-simple.svg %}{{ t.email_me }}</a>
+    </div>
+  </div>
+</section>

@@ -370,6 +370,8 @@ body.menu-open { overflow: hidden; }
 .about-text { display: grid; gap: var(--s-300); justify-items: start; min-width: 0; max-width: 680px; }
 .about-text > p.body-3 { color: var(--muted); }
 .about-text .icon-links { margin-inline: calc(-1 * var(--s-100)); }
+.collab-list { display: grid; gap: var(--s-200); width: 100%; margin: 0; padding: 0; list-style: none; }
+.collab-list li { padding-top: var(--s-200); border-top: 1px solid var(--line); text-wrap: pretty; }
 
 /* Research areas */
 .areas { display: grid; gap: var(--s-300); }
@@ -439,13 +441,6 @@ body.menu-open { overflow: hidden; }
 .chip:hover { color: var(--fg); border-color: var(--fg); }
 .chip:active { transform: scale(0.98); }
 .chip[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-.empty {
-  display: grid; gap: var(--s-75); justify-items: start;
-  padding: var(--s-400) var(--s-300);
-  border: 1px dashed var(--line);
-  border-radius: var(--r-2xl);
-  color: var(--muted);
-}
 
 /* Inner pages: profile card beside the content */
 .page { display: grid; gap: var(--s-500); padding-top: calc(env(safe-area-inset-top, 0px) + var(--s-900) + var(--s-200)); padding-bottom: var(--s-800); }

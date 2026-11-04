@@ -97,7 +97,6 @@
   if (filterBar) {
     var items = Array.prototype.slice.call(document.querySelectorAll("[data-area]"));
     var groups = Array.prototype.slice.call(document.querySelectorAll("[data-group]"));
-    var empty = document.querySelector("[data-empty]");
     var status = document.querySelector("[data-filter-status]");
     filterBar.addEventListener("click", function (e) {
       var chip = e.target.closest(".chip");
@@ -118,7 +117,6 @@
         var count = g.querySelector("[data-count]");
         if (count) count.textContent = visible;
       });
-      if (empty) empty.hidden = shown !== 0;
       if (status) status.textContent = (status.getAttribute("data-template") || "%n items shown").replace("%n", shown);
     });
   }

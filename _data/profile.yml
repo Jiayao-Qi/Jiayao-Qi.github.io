@@ -120,3 +120,10 @@ methods:
   - name: "Languages"
     detail: "Chinese (native) and English (proficient)"
 
+# Collaboration section at the end of the home page.
+collaboration:
+  lead: "I welcome collaborations on:"
+  areas:
+    - "Sport management research"
+    - "Research and analysis for industry and business"
+    - "AI and its implications for the sport industry"

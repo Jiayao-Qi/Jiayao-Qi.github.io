@@ -80,3 +80,11 @@ methods:
     detail: "网络爬虫与 API（Python、R）"
   - name: "语言"
     detail: "中文（母语）、英语（熟练）"
+
+# 首页末尾的合作板块。
+collaboration:
+  lead: "欢迎在以下方面开展合作："
+  areas:
+    - "体育管理研究"
+    - "面向行业与企业的研究与分析"
+    - "人工智能及其对体育产业的影响"
